@@ -16,8 +16,7 @@ export class MyApp {
   rootPage: any;
   zone: NgZone;
 
-  constructor(platform: Platform, private statusBar: StatusBar, 
-    private splashScreen: SplashScreen) {
+  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     this.zone = new NgZone({});
     firebase.initializeApp({
       apiKey: "AIzaSyBwEUe6x_w_yLFrr--xYLQJLxRT2Rc8vtY",

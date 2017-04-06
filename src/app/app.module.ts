@@ -1,6 +1,7 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
+import { BrowserModule } from '@angular/platform-browser';
 
 // Import pages
 import { HomePage } from '../pages/home/home';
@@ -13,6 +14,7 @@ import { ResetPasswordPage } from '../pages/reset-password/reset-password';
 import { SignupPage } from '../pages/signup/signup';
 
 // Import providers
+import { AppProviders } from './app.providers';
 import { AuthData } from '../providers/auth-data';
 import { EventData } from '../providers/event-data';
 import { ProfileData } from '../providers/profile-data';
@@ -21,6 +23,14 @@ import { ProfileData } from '../providers/profile-data';
 import { Camera } from '@ionic-native/camera';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+
+class CameraMock extends Camera {
+  getPicture(options){
+    return new Promise( (resolve, reject) => {
+      resolve("TWFuIGlzIGRpc3Rpbmd1aXNoZWQsIG5vdCBvbmx5IGJ5IGhpcyByZWFzb24sIGJ1dCBieSB0aGlzIHNpbmd1bGFyIHBhc3Npb24gZnJvbSBvdGhlciBhbmltYWxzLCB3aGljaCBpcyBhIGx1c3Qgb2YgdGhlIG1pbmQsIHRoYXQgYnkgYSBwZXJzZXZlcmFuY2Ugb2YgZGVsaWdodCBpbiB0aGUgY29udGludWVkIGFuZCBpbmRlZmF0aWdhYmxlIGdlbmVyYXRpb24gb2Yga25vd2xlZGdlLCBleGNlZWRzIHRoZSBzaG9ydCB2ZWhlbWVuY2Ugb2YgYW55IGNhcm5hbCBwbGVhc3VyZS4=");
+    });
+  }
+}
 
 @NgModule({
   declarations: [
@@ -35,6 +45,7 @@ import { StatusBar } from '@ionic-native/status-bar';
     SignupPage
   ],
   imports: [
+    BrowserModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -49,15 +60,7 @@ import { StatusBar } from '@ionic-native/status-bar';
     ResetPasswordPage,
     SignupPage
   ],
-  providers: [
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AuthData,
-    EventData,
-    ProfileData,
-    Camera,
-    SplashScreen,
-    StatusBar
-  ]
+  providers: AppProviders.getProviders()
 })
 export class AppModule {}
 
