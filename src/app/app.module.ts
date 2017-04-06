@@ -14,7 +14,7 @@ import { ResetPasswordPage } from '../pages/reset-password/reset-password';
 import { SignupPage } from '../pages/signup/signup';
 
 // Import providers
-import { AppProviders } from './app.providers';
+import { GetProviders } from './app.providers';
 
 @NgModule({
   declarations: [
@@ -44,7 +44,7 @@ import { AppProviders } from './app.providers';
     ResetPasswordPage,
     SignupPage
   ],
-  providers: AppProviders.getProviders()
+  providers: GetProviders()
 })
 export class AppModule {}
 
