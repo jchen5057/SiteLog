@@ -8,9 +8,9 @@ import { Camera } from '@ionic-native/camera';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
-import { AuthDataProvider } from '../providers/auth-data/auth-data';
-import { EventDataProvider } from '../providers/event-data/event-data';
-import { ProfileDataProvider } from '../providers/profile-data/profile-data';
+import { AuthProvider } from '../providers/auth-data/auth-data';
+import { EventProvider } from '../providers/event-data/event-data';
+import { ProfileProvider } from '../providers/profile-data/profile-data';
 
 class CameraMock extends Camera {
   getPicture(options){
@@ -38,7 +38,10 @@ class CameraMock extends Camera {
     StatusBar,
     SplashScreen,
     {provide: Camera, useClass: CameraMock},
-    {provide: ErrorHandler, useClass: IonicErrorHandler}, AuthDataProvider, EventDataProvider, ProfileDataProvider
+    {provide: ErrorHandler, useClass: IonicErrorHandler}, 
+    AuthProvider, 
+    EventProvider, 
+    ProfileProvider
   ]
 })
 export class AppModule {}
