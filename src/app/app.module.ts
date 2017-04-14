@@ -1,32 +1,29 @@
-import { NgModule } from '@angular/core';
-import { IonicApp, IonicModule } from 'ionic-angular';
-import { MyApp } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
+import { ErrorHandler, NgModule } from '@angular/core';
+import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { SplashScreen } from '@ionic-native/splash-screen';
+import { StatusBar } from '@ionic-native/status-bar';
+import { Camera } from '@ionic-native/camera';
 
-// Import pages
+import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { EventCreatePage } from '../pages/event-create/event-create';
-import { EventDetailPage } from '../pages/event-detail/event-detail';
-import { EventListPage } from '../pages/event-list/event-list';
-import { LoginPage } from '../pages/login/login';
-import { ProfilePage } from '../pages/profile/profile';
-import { ResetPasswordPage } from '../pages/reset-password/reset-password';
-import { SignupPage } from '../pages/signup/signup';
 
-// Import providers
-import { GetProviders } from './app.providers';
+import { AuthDataProvider } from '../providers/auth-data/auth-data';
+import { EventDataProvider } from '../providers/event-data/event-data';
+import { ProfileDataProvider } from '../providers/profile-data/profile-data';
+
+class CameraMock extends Camera {
+  getPicture(options){
+    return new Promise( (resolve, reject) => {
+      resolve("ADD_BASE64_STRING_RESPONSE_HERE");
+    });
+  }
+}
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
-    EventCreatePage,
-    EventDetailPage,
-    EventListPage,
-    LoginPage,
-    ProfilePage,
-    ResetPasswordPage,
-    SignupPage
+    HomePage
   ],
   imports: [
     BrowserModule,
@@ -35,16 +32,13 @@ import { GetProviders } from './app.providers';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
-    EventCreatePage,
-    EventDetailPage,
-    EventListPage,
-    LoginPage,
-    ProfilePage,
-    ResetPasswordPage,
-    SignupPage
+    HomePage
   ],
-  providers: GetProviders()
+  providers: [
+    StatusBar,
+    SplashScreen,
+    {provide: Camera, useClass: CameraMock},
+    {provide: ErrorHandler, useClass: IonicErrorHandler}, AuthDataProvider, EventDataProvider, ProfileDataProvider
+  ]
 })
 export class AppModule {}
-
