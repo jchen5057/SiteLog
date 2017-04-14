@@ -7,7 +7,6 @@ import { Camera } from '@ionic-native/camera';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-// import { LoginPage } from '../pages/login/login';
 
 import { AuthProvider } from '../providers/auth/auth';
 import { EventProvider } from '../providers/event/event';
@@ -28,7 +27,6 @@ class CameraMock extends Camera {
   declarations: [
     MyApp,
     HomePage
-    //    LoginPage
   ],
   imports: [
     BrowserModule,
@@ -38,7 +36,6 @@ class CameraMock extends Camera {
   entryComponents: [
     MyApp,
     HomePage
-    //    LoginPage
   ],
   providers: [
     StatusBar,

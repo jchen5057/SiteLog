@@ -1,7 +1,7 @@
 {
   "name": "MyEventManager",
-  "author": "Ionic Framework",
-  "homepage": "http://ionicframework.com/",
+  "author": "JAVEBRATT",
+  "homepage": "https://javebratt.com/",
   "private": true,
   "scripts": {
     "clean": "ionic-app-scripts clean",

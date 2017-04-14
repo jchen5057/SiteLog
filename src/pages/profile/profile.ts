@@ -17,7 +17,7 @@ export class ProfilePage {
   constructor(public navCtrl: NavController, public alertCtrl: AlertController, 
     public profileProvider: ProfileProvider, public authProvider: AuthProvider) {}
 
-  ionViewDidLoad() {
+  ionViewDidEnter() {
     this.profileProvider.getUserProfile().then( profileSnap => {
       this.userProfile = profileSnap;
       this.birthDate = this.userProfile.birthDate;

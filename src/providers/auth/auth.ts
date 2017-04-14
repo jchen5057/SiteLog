@@ -17,11 +17,11 @@ export class AuthProvider {
     });
   }
 
-  resetPassword(email: string): firebase.Promise<any> {
+  resetPassword(email: string): firebase.Promise<void> {
     return firebase.auth().sendPasswordResetEmail(email);
   }
 
-  logoutUser(): firebase.Promise<any> {
+  logoutUser(): firebase.Promise<void> {
     firebase.database().ref('/userProfile').child(firebase.auth().currentUser.uid).off();
     return firebase.auth().signOut();
   }

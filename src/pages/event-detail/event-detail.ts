@@ -17,8 +17,10 @@ export class EventDetailPage {
   public guestPicture: string = null;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, 
-    public eventProvider: EventProvider, public cameraPlugin: Camera) {
-      eventProvider.getEventDetail(navParams.get('eventId')).then( eventSnap => {
+    public eventProvider: EventProvider, public cameraPlugin: Camera) {}
+
+    ionViewDidEnter(){
+      this.eventProvider.getEventDetail(this.navParams.get('eventId')).then( eventSnap => {
         this.currentEvent = eventSnap;
       });
     }
