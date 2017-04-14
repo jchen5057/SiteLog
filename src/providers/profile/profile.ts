@@ -9,14 +9,16 @@ export class ProfileProvider {
     this.currentUser = firebase.auth().currentUser;
   }
 
-  getUserProfile(): firebase.database.Reference {
-    return firebase.database().ref('/userProfile')
-    .child(this.currentUser.uid);
+  getUserProfile(): Promise<any> {
+    return new Promise( (resolve, reject) => {
+      firebase.database().ref('/userProfile').child(this.currentUser.uid).on('value', (data) => {
+        resolve(data.val());
+      });
+    });
   }
 
   updateName(firstName: string, lastName: string): firebase.Promise<any> {
-    return firebase.database().ref('/userProfile')
-    .child(this.currentUser.uid).update({
+    return firebase.database().ref('/userProfile').child(this.currentUser.uid).update({
       firstName: firstName,
       lastName: lastName,
     });

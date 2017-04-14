@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { 
+import {
+  IonicPage, 
   Loading,
   LoadingController, 
   NavController,
@@ -9,6 +10,9 @@ import { EmailValidator } from '../../validators/email';
 import { AuthProvider } from '../../providers/auth/auth';
 import { HomePage } from '../home/home';
 
+@IonicPage({
+  name: 'login'
+})
 @Component({
   selector: 'page-login',
   templateUrl: 'login.html',

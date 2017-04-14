@@ -7,7 +7,7 @@ import { Camera } from '@ionic-native/camera';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { LoginPage } from '../pages/login/login';
+// import { LoginPage } from '../pages/login/login';
 
 import { AuthProvider } from '../providers/auth/auth';
 import { EventProvider } from '../providers/event/event';
@@ -24,8 +24,8 @@ class CameraMock extends Camera {
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
-    LoginPage
+    HomePage
+    //    LoginPage
   ],
   imports: [
     BrowserModule,
@@ -34,8 +34,8 @@ class CameraMock extends Camera {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
-    LoginPage
+    HomePage
+    //    LoginPage
   ],
   providers: [
     StatusBar,
