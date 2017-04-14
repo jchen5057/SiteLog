@@ -3,17 +3,21 @@ import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { HomePage } from '../pages/home/home';
+import { LoginPage } from '../pages/login/login';
+
 import firebase from 'firebase';
 
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any;
+  rootPage: any;
   zone: NgZone;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     this.zone = new NgZone({});
+    
     firebase.initializeApp({
       apiKey: "AIzaSyBwEUe6x_w_yLFrr--xYLQJLxRT2Rc8vtY",
       authDomain: "ionic-firebase-auth-9f555.firebaseapp.com",
@@ -25,10 +29,10 @@ export class MyApp {
     const unsubscribe = firebase.auth().onAuthStateChanged((user) => {
       this.zone.run( () => {
         if (!user) {
-          this.rootPage = 'login';
+          this.rootPage = LoginPage;
           unsubscribe();
         } else { 
-          this.rootPage = 'home';
+          this.rootPage = HomePage;
           unsubscribe();
         }
       });     

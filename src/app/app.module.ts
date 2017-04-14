@@ -7,10 +7,11 @@ import { Camera } from '@ionic-native/camera';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { LoginPage } from '../pages/login/login';
 
-import { AuthProvider } from '../providers/auth-data/auth-data';
-import { EventProvider } from '../providers/event-data/event-data';
-import { ProfileProvider } from '../providers/profile-data/profile-data';
+import { AuthProvider } from '../providers/auth/auth';
+import { EventProvider } from '../providers/event/event';
+import { ProfileProvider } from '../providers/profile/profile';
 
 class CameraMock extends Camera {
   getPicture(options){
@@ -23,7 +24,8 @@ class CameraMock extends Camera {
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    LoginPage
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,8 @@ class CameraMock extends Camera {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    LoginPage
   ],
   providers: [
     StatusBar,
