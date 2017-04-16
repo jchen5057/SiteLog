@@ -59,8 +59,8 @@ export class EventProvider {
       guestName: guestName
     }).then((newGuest) => {
       firebase.database().ref(`userProfile/${firebase.auth().currentUser.uid}/eventList`)
-      .child(eventId).child('revenue').transaction( revenue => {
-        revenue += eventPrice;
+      .child(eventId).transaction( event => {
+        event.revenue += eventPrice;
         return event;
       });
       if (guestPicture != null) {
