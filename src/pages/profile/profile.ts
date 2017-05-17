@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, AlertController } from 'ionic-angular';
-import { ProfileProvider } from '../../providers/profile/profile';
-import { AuthProvider } from '../../providers/auth/auth';
+import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+
+import { ProfileProvider } from '../../providers/profile';
+import { AuthService } from '../../providers/auth-service';
 
 @IonicPage({
   name: 'profile'
@@ -12,37 +14,49 @@ import { AuthProvider } from '../../providers/auth/auth';
 })
 export class ProfilePage {
   public userProfile: any;
-  public birthDate: string;
 
-  constructor(public navCtrl: NavController, public alertCtrl: AlertController, 
-    public profileProvider: ProfileProvider, public authProvider: AuthProvider) {}
-
-  ionViewDidEnter() {
-    this.profileProvider.getUserProfile().then( profileSnap => {
-      this.userProfile = profileSnap;
-      this.birthDate = this.userProfile.birthDate;
-    });
+  constructor(public navCtrl: NavController, public alertCtrl: AlertController,
+    public profileProvider: ProfileProvider, public auth: AuthService, db: AngularFireDatabase) {
+    if (auth.currentUser) {
+      db.object(`/userProfile/${auth.currentUser.uid}`).subscribe(p => {
+        this.userProfile = p;
+      });
+    } else {
+      this.navCtrl.setRoot('login');
+    }
   }
 
-  logOut(){
-    this.authProvider.logoutUser().then(() => {
+  ionViewDidEnter() {
+    /*
+    this.profileProvider.getUserProfile().then(profileSnap => {
+      if (profileSnap) {
+        console.log(profileSnap);
+        this.userProfile = profileSnap;
+      } else {
+        this.userProfile = this.auth.newProfile();
+      }
+    });*/
+  }
+
+  logOut() {
+    this.auth.logoutUser().then(() => {
       this.navCtrl.setRoot('login');
     });
   }
 
-  updateName(){
+  updateName() {
     let alert = this.alertCtrl.create({
       message: "Your first name & last name",
       inputs: [
         {
           name: 'firstName',
           placeholder: 'Your first name',
-          value: this.userProfile.firstName
+          value: this.userProfile.firstName || ''
         },
         {
           name: 'lastName',
           placeholder: 'Your last name',
-          value: this.userProfile.lastName
+          value: this.userProfile.lastName || ''
         },
       ],
       buttons: [
@@ -60,11 +74,38 @@ export class ProfilePage {
     alert.present();
   }
 
-  updateDOB(birthDate){
-    this.profileProvider.updateDOB(birthDate);
+  updatePhone() {
+    let alert = this.alertCtrl.create({
+      message: "Contact Phone #",
+      inputs: [
+        {
+          name: 'workPhone',
+          placeholder: 'Your work phone#',
+          value: this.userProfile.workPhone || ''
+        },
+        {
+          name: 'cellPhone',
+          placeholder: 'Your cell phone#',
+          value: this.userProfile.cellPhone || ''
+        },
+      ],
+      buttons: [
+        {
+          text: 'Cancel',
+        },
+        {
+          text: 'Save',
+          handler: data => {
+            this.profileProvider.updatePhone(data.workPhone, data.cellPhone);            
+          }
+        }
+      ]
+    });
+    alert.present();
   }
 
-  updateEmail(){
+  /*
+  updateEmail() {
     let alert = this.alertCtrl.create({
       inputs: [
         {
@@ -90,9 +131,9 @@ export class ProfilePage {
       ]
     });
     alert.present();
-  }
+  }*/
 
-  updatePassword(){
+  updatePassword() {
     let alert = this.alertCtrl.create({
       inputs: [
         {

@@ -1,20 +1,36 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpModule } from '@angular/http';
 import { ErrorHandler, NgModule } from '@angular/core';
+
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { Geolocation } from '@ionic-native/geolocation';
+import { Network } from '@ionic-native/network';
 import { Camera } from '@ionic-native/camera';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import { HomeTabs } from '../pages/home/home-tabs';
+import { MapPage } from '../pages/map/map';
 
-import { AuthProvider } from '../providers/auth/auth';
-import { EventProvider } from '../providers/event/event';
-import { ProfileProvider } from '../providers/profile/profile';
+import { AuthService } from '../providers/auth-service';
+import { LogProvider } from '../providers/log';
+import { ProfileProvider } from '../providers/profile';
+
+import { Stations } from '../providers/stations';
+import { Instruments } from '../providers/instruments';
+import { GoogleMaps } from '../providers/google-maps';
+import { Connectivity } from '../providers/connectivity-service';
+
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+
+//import * as firebase from 'firebase';
 
 class CameraMock extends Camera {
-  getPicture(options){
-    return new Promise( (resolve, reject) => {
+  getPicture(options) {
+    return new Promise((resolve, reject) => {
       resolve(`TWFuIGlzIGRpc3Rpbmd1aXNoZWQsIG5vdCBvbmx5IGJ5IGhpcyByZWFzb24sIGJ1dCBieSB0aGlzIHNpbmd1
       bGFyIHBhc3Npb24gZnJvbSBvdGhlciBhbmltYWxzLCB3aGljaCBpcyBhIGx1c3Qgb2YgdGhlIG1pbmQsIHRoYXQgYnkgY
       SBwZXJzZXZlcmFuY2Ugb2YgZGVsaWdodCBpbiB0aGUgY29udGludWVkIGFuZCBpbmRlZmF0aWdhYmxlIGdlbmVyYXRpb2
@@ -23,28 +39,46 @@ class CameraMock extends Camera {
   }
 }
 
+export const firebaseConfig = {
+  apiKey: "AIzaSyDPVX6GkNkbYjgGyMoGlaBaxRAQ09_EuFk",
+  authDomain: "sitelog-17255.firebaseapp.com",
+  databaseURL: "https://sitelog-17255.firebaseio.com",
+  projectId: "sitelog-17255",
+  storageBucket: "sitelog-17255.appspot.com",
+  messagingSenderId: "172022077560"
+};
+
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomeTabs,
+    MapPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    HttpModule,
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomeTabs,
+    MapPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: Camera, useClass: CameraMock},
-    {provide: ErrorHandler, useClass: IonicErrorHandler}, 
-    AuthProvider, 
-    EventProvider, 
+    Geolocation,
+    Network,
+    Stations, Instruments, GoogleMaps, Connectivity,
+    { provide: Camera, useClass: CameraMock },
+    { provide: ErrorHandler, useClass: IonicErrorHandler },
+    AuthService,
+    LogProvider,
     ProfileProvider
   ]
 })
-export class AppModule {}
+export class AppModule { }

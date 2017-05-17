@@ -18,13 +18,31 @@
     <ion-item (click)="updateName()">
       <ion-grid>
         <ion-row>
-          <ion-col col-6>
+          <ion-col col-4>
             Name
           </ion-col>
-          <ion-col col-6 *ngIf="userProfile?.firstName || userProfile?.lastName">
+          <ion-col col-8 *ngIf="userProfile?.firstName || userProfile?.lastName">
             {{userProfile?.firstName}} {{userProfile?.lastName}}
           </ion-col>
-          <ion-col col-6 class="placeholder-profile" *ngIf="!userProfile?.firstName">
+          <ion-col col-8 class="placeholder-profile" *ngIf="!userProfile?.firstName">
+            <span>
+              Tap here to edit.
+            </span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+
+    <ion-item (click)="updatePhone()">
+      <ion-grid>
+        <ion-row>
+          <ion-col col-4>
+            Phone#
+          </ion-col>
+          <ion-col col-8 *ngIf="userProfile?.workPhone || userProfile?.cellPhone" class="placeholder-profile">
+            {{userProfile?.workPhone}} {{userProfile?.cellPhone}}
+          </ion-col>
+          <ion-col col-8 class="placeholder-profile" *ngIf="!userProfile?.workPhone">
             <span>
               Tap here to edit.
             </span>
@@ -34,24 +52,13 @@
     </ion-item>
 
     <ion-item>
-      <ion-label class="dob-label">Date of Birth</ion-label>
-      <ion-datetime displayFormat="MMM D, YYYY" pickerFormat="D MMM YYYY"
-        [(ngModel)]="birthDate" (ionChange)="updateDOB(birthDate)"></ion-datetime>
-    </ion-item>
-
-    <ion-item (click)="updateEmail()">
       <ion-grid>
         <ion-row>
-          <ion-col col-6>
+          <ion-col col-4>
             Email
           </ion-col>
-          <ion-col col-6 *ngIf="userProfile?.email">
+          <ion-col col-8 *ngIf="userProfile?.email" class="placeholder-profile">
             {{userProfile?.email}}
-          </ion-col>
-          <ion-col col-6 class="placeholder-profile" *ngIf="!userProfile?.email">
-            <span>
-              Tap here to edit.
-            </span>
           </ion-col>
         </ion-row>
       </ion-grid>
@@ -60,10 +67,10 @@
     <ion-item (click)="updatePassword()">
       <ion-grid>
         <ion-row>
-          <ion-col col-6>
+          <ion-col col-4>
             Password
           </ion-col>
-          <ion-col col-6 class="placeholder-profile">
+          <ion-col col-8 class="placeholder-profile">
             <span>
               Tap here to edit.
             </span>

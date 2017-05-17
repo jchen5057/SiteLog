@@ -1,16 +1,24 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Home Page
-    </ion-title>
-    <ion-buttons end>
-      <button ion-button icon-only (click)="goToProfile()">
-        <ion-icon name="person"></ion-icon>
+    <ion-navbar>
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
         </button>
-    </ion-buttons>
-  </ion-navbar>
-</ion-header>
+        <ion-title>BAAQMD eLog</ion-title>
+        <ion-buttons end *ngIf='user'>
+            <button ion-button icon-only (click)='gotoProfile()'>
+                <ion-avatar>
+                    <ion-icon name='person'></ion-icon>
+                </ion-avatar>
+            </button>
+            <button ion-button icon-only (click)='logout()'>
+                <ion-avatar>
+                    <ion-icon name='exit'></ion-icon>
+                </ion-avatar>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
 
+</ion-header>
 <ion-content padding>
   <button ion-button block color="primary" (click)="goToCreate()">
     Create a new Event

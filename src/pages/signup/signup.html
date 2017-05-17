@@ -8,18 +8,18 @@
 
 
 <ion-content padding>
-  <img src="http://placehold.it/300x100">
+  <img src="../assets/img/baaqmd_logo.png">
   <form [formGroup]="signupForm" (submit)="signupUser()" novalidate>
 
     <ion-item>
       <ion-label stacked>Email</ion-label>
-      <ion-input formControlName="email" type="email" placeholder="Your email address" 
+      <ion-input formControlName="email" type="email" placeholder="Your baaqmd email address" 
         [class.invalid]="!signupForm.controls.email.valid && signupForm.controls.email.dirty">
       </ion-input>
     </ion-item>
     <ion-item class="error-message" 
       *ngIf="!signupForm.controls.email.valid  && signupForm.controls.email.dirty">
-      <p>Please enter a valid email.</p>
+      <p>Please enter your BAAQMD valid email.</p>
     </ion-item>
 
     <ion-item>

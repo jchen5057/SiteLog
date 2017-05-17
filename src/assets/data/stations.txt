@@ -1,0 +1,2171 @@
+[
+ {
+   "StationID": "N/A",
+   "Name": "N/A",
+   "Elevation": 0,
+   "Latitude": 0,
+   "Longitude": 0,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "1014",
+   "Name": "Fremont - Chapel Way",
+   "Elevation": 17,
+   "Latitude": 37.535833,
+   "Longitude": -121.961823,
+   "FullAQSCode": "060011001",
+   "IsActive": 0
+ },
+ {
+   "StationID": "1015",
+   "Name": "Hayward - La Mesa",
+   "Elevation": 290,
+   "Latitude": 37.654456,
+   "Longitude": -122.031547,
+   "FullAQSCode": "060012001",
+   "IsActive": 1
+ },
+ {
+   "StationID": "1022",
+   "Name": "San Leandro",
+   "Elevation": 43,
+   "Latitude": 37.710229,
+   "Longitude": -122.116899,
+   "FullAQSCode": "060010006",
+   "IsActive": 0
+ },
+ {
+   "StationID": "1023",
+   "Name": "Livermore - Rincon Ave.",
+   "Elevation": 137,
+   "Latitude": 37.687526,
+   "Longitude": -121.784217,
+   "FullAQSCode": "060010007",
+   "IsActive": 1
+ },
+ {
+   "StationID": "1024",
+   "Name": "Oakland - Filbert St.",
+   "Elevation": 14,
+   "Latitude": 37.817118,
+   "Longitude": -122.280454,
+   "FullAQSCode": "060010008",
+   "IsActive": 0
+ },
+ {
+   "StationID": "2010",
+   "Name": "Pittsburg - W 10th St",
+   "Elevation": 2,
+   "Latitude": 38.029258,
+   "Longitude": -121.896866,
+   "FullAQSCode": "060133001",
+   "IsActive": 0
+ },
+ {
+   "StationID": "2013",
+   "Name": "Pt. Richmond",
+   "Elevation": 2,
+   "Latitude": 37.926162,
+   "Longitude": -122.385561,
+   "FullAQSCode": "060130005",
+   "IsActive": 1
+ },
+ {
+   "StationID": "2014",
+   "Name": "Martinez - Jones St",
+   "Elevation": 8,
+   "Latitude": 38.012816,
+   "Longitude": -122.134467,
+   "FullAQSCode": "060132001",
+   "IsActive": 1
+ },
+ {
+   "StationID": "2017",
+   "Name": "Crockett - Kendall Ave",
+   "Elevation": 76,
+   "Latitude": 38.05492,
+   "Longitude": -122.233229,
+   "FullAQSCode": "060131001",
+   "IsActive": 1
+ },
+ {
+   "StationID": "2019",
+   "Name": "Richmond - 7th St",
+   "Elevation": 6,
+   "Latitude": 37.948172,
+   "Longitude": -122.364852,
+   "FullAQSCode": "060130006",
+   "IsActive": 1
+ },
+ {
+   "StationID": "2021",
+   "Name": "Bethel Island",
+   "Elevation": -2,
+   "Latitude": 38.006311,
+   "Longitude": -121.641918,
+   "FullAQSCode": "060131002",
+   "IsActive": 1
+ },
+ {
+   "StationID": "2034",
+   "Name": "Rodeo",
+   "Elevation": 12,
+   "Latitude": 38.034331,
+   "Longitude": -122.270336,
+   "FullAQSCode": "060130007",
+   "IsActive": 1
+ },
+ {
+   "StationID": "2035",
+   "Name": "San Pablo - Rumrill",
+   "Elevation": 20,
+   "Latitude": 37.9604,
+   "Longitude": -122.356811,
+   "FullAQSCode": "060131004",
+   "IsActive": 1
+ },
+ {
+   "StationID": "2036",
+   "Name": "Concord - 2956-A Treat Blvd",
+   "Elevation": 26,
+   "Latitude": 37.936013,
+   "Longitude": -122.026154,
+   "FullAQSCode": "060130002",
+   "IsActive": 1
+ },
+ {
+   "StationID": "3005",
+   "Name": "San Rafael",
+   "Elevation": 3,
+   "Latitude": 37.97231,
+   "Longitude": -122.520004,
+   "FullAQSCode": "060410001",
+   "IsActive": 1
+ },
+ {
+   "StationID": "4001",
+   "Name": "Napa - Jefferson St",
+   "Elevation": 13,
+   "Latitude": 38.310942,
+   "Longitude": -122.296189,
+   "FullAQSCode": "060550003",
+   "IsActive": 1
+ },
+ {
+   "StationID": "5011",
+   "Name": "San Francisco - Arkansas St.",
+   "Elevation": 5,
+   "Latitude": 37.765946,
+   "Longitude": -122.399044,
+   "FullAQSCode": "060750005",
+   "IsActive": 1
+ },
+ {
+   "StationID": "6004",
+   "Name": "Redwood City",
+   "Elevation": 3,
+   "Latitude": 37.482934,
+   "Longitude": -122.2035,
+   "FullAQSCode": "060811001",
+   "IsActive": 1
+ },
+ {
+   "StationID": "7006",
+   "Name": "Los Gatos",
+   "Elevation": 116,
+   "Latitude": 37.226862,
+   "Longitude": -121.979675,
+   "FullAQSCode": "060851001",
+   "IsActive": 1
+ },
+ {
+   "StationID": "7015",
+   "Name": "Gilroy - 9th St",
+   "Elevation": 63,
+   "Latitude": 36.999571,
+   "Longitude": -121.574684,
+   "FullAQSCode": "060850002",
+   "IsActive": 1
+ },
+ {
+   "StationID": "7019",
+   "Name": "San Jose",
+   "Elevation": 38,
+   "Latitude": 37.3062,
+   "Longitude": -121.84885,
+   "FullAQSCode": "060852003",
+   "IsActive": 0
+ },
+ {
+   "StationID": "7022",
+   "Name": "San Martin-Airport",
+   "Elevation": 86,
+   "Latitude": 37.079379,
+   "Longitude": -121.600031,
+   "FullAQSCode": "060852006",
+   "IsActive": 1
+ },
+ {
+   "StationID": "7030",
+   "Name": "Sunnyvale - Ticonderoga",
+   "Elevation": 56,
+   "Latitude": 37.355475,
+   "Longitude": -122.050845,
+   "FullAQSCode": "060852007",
+   "IsActive": 0
+ },
+ {
+   "StationID": "7032",
+   "Name": "San Jose - Jackson St.",
+   "Elevation": 31,
+   "Latitude": 37.348497,
+   "Longitude": -121.894898,
+   "FullAQSCode": "060850005",
+   "IsActive": 1
+ },
+ {
+   "StationID": "8004",
+   "Name": "Vallejo - Tuolumne St",
+   "Elevation": 6,
+   "Latitude": 38.102507,
+   "Longitude": -122.237976,
+   "FullAQSCode": "060950004",
+   "IsActive": 1
+ },
+ {
+   "StationID": "8007",
+   "Name": "Fairfield - Chadbourne Rd.",
+   "Elevation": 10,
+   "Latitude": 38.227066,
+   "Longitude": -122.075624,
+   "FullAQSCode": "060950005",
+   "IsActive": 1
+ },
+ {
+   "StationID": "9004",
+   "Name": "Santa Rosa - 5th St",
+   "Elevation": 51,
+   "Latitude": 38.443503,
+   "Longitude": -122.710169,
+   "FullAQSCode": "060970003",
+   "IsActive": 0
+ },
+ {
+   "StationID": "2901",
+   "Name": "m_Bethel Island",
+   "Elevation": -2,
+   "Latitude": 38.00633,
+   "Longitude": -121.642,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "1903",
+   "Name": "m_Chabot",
+   "Elevation": 173,
+   "Latitude": 37.72081,
+   "Longitude": -122.09914,
+   "FullAQSCode": "060016001",
+   "IsActive": 1
+ },
+ {
+   "StationID": "2903",
+   "Name": "m_Concord",
+   "Elevation": 24,
+   "Latitude": 37.9395,
+   "Longitude": -122.02964,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "5905",
+   "Name": "m_Fort Funston",
+   "Elevation": 57,
+   "Latitude": 37.71481,
+   "Longitude": -122.50047,
+   "FullAQSCode": "060756002",
+   "IsActive": 1
+ },
+ {
+   "StationID": "7906",
+   "Name": "m_Gilroy AQ",
+   "Elevation": 63,
+   "Latitude": 36.99958,
+   "Longitude": -121.57467,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "2905",
+   "Name": "m_Kregor Peak",
+   "Elevation": 577,
+   "Latitude": 37.94311,
+   "Longitude": -121.89117,
+   "FullAQSCode": "060136002",
+   "IsActive": 0
+ },
+ {
+   "StationID": "1907",
+   "Name": "m_Livermore Rincon",
+   "Elevation": 137,
+   "Latitude": 37.68753,
+   "Longitude": -121.78422,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "5906",
+   "Name": "Air District Office",
+   "Elevation": 0,
+   "Latitude": 37.78373,
+   "Longitude": -122.42163,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 1
+ },
+ {
+   "StationID": "3901",
+   "Name": "m_Mt. Tamalpais",
+   "Elevation": 762,
+   "Latitude": 37.92736,
+   "Longitude": -122.58844,
+   "FullAQSCode": "060416001",
+   "IsActive": 0
+ },
+ {
+   "StationID": "4902",
+   "Name": "m_Napa",
+   "Elevation": 2,
+   "Latitude": 38.2785,
+   "Longitude": -122.27825,
+   "FullAQSCode": "060556001",
+   "IsActive": 1
+ },
+ {
+   "StationID": "2907",
+   "Name": "m_Pt. San Pablo",
+   "Elevation": 70,
+   "Latitude": 37.96186,
+   "Longitude": -122.42333,
+   "FullAQSCode": "060136003",
+   "IsActive": 1
+ },
+ {
+   "StationID": "1905",
+   "Name": "m_Pleasanton",
+   "Elevation": 102,
+   "Latitude": 37.69875,
+   "Longitude": -121.91331,
+   "FullAQSCode": "060016003",
+   "IsActive": 1
+ },
+ {
+   "StationID": "8901",
+   "Name": "m_Rio Vista",
+   "Elevation": 6,
+   "Latitude": 38.18839,
+   "Longitude": -121.70564,
+   "FullAQSCode": "060956001",
+   "IsActive": 1
+ },
+ {
+   "StationID": "6901",
+   "Name": "m_San Carlos",
+   "Elevation": 1,
+   "Latitude": 37.51706,
+   "Longitude": -122.25181,
+   "FullAQSCode": "060816001",
+   "IsActive": 1
+ },
+ {
+   "StationID": "7901",
+   "Name": "m_San Martin",
+   "Elevation": 85,
+   "Latitude": 37.08583,
+   "Longitude": -121.60114,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "9902",
+   "Name": "m_Santa Rosa",
+   "Elevation": 29,
+   "Latitude": 38.41736,
+   "Longitude": -122.76167,
+   "FullAQSCode": "060976001",
+   "IsActive": 0
+ },
+ {
+   "StationID": "9903",
+   "Name": "m_Sonoma Baylands",
+   "Elevation": 0,
+   "Latitude": 38.13161,
+   "Longitude": -122.47467,
+   "FullAQSCode": "060976002",
+   "IsActive": 1
+ },
+ {
+   "StationID": "8902",
+   "Name": "m_Suisun STP",
+   "Elevation": 5,
+   "Latitude": 38.22711,
+   "Longitude": -122.07567,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "1904",
+   "Name": "m_Sunol",
+   "Elevation": 143,
+   "Latitude": 37.59369,
+   "Longitude": -121.87622,
+   "FullAQSCode": "060016002",
+   "IsActive": 0
+ },
+ {
+   "StationID": "2950",
+   "Name": "m_UC Richmond",
+   "Elevation": 1,
+   "Latitude": 37.91478,
+   "Longitude": -122.33794,
+   "FullAQSCode": "060136004",
+   "IsActive": 0
+ },
+ {
+   "StationID": "8903",
+   "Name": "m_Vallejo",
+   "Elevation": 6,
+   "Latitude": 38.102506,
+   "Longitude": -122.23805,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "3902",
+   "Name": "m_Valley Ford",
+   "Elevation": 23,
+   "Latitude": 38.30836,
+   "Longitude": -122.89744,
+   "FullAQSCode": "060416002",
+   "IsActive": 1
+ },
+ {
+   "StationID": "1025",
+   "Name": "Oakland East",
+   "Elevation": 11,
+   "Latitude": 37.743065,
+   "Longitude": -122.169935,
+   "FullAQSCode": "060010009",
+   "IsActive": 1
+ },
+ {
+   "StationID": "0",
+   "Name": "00 Offline",
+   "Elevation": 0,
+   "Latitude": 38,
+   "Longitude": -124,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "8008",
+   "Name": "Benicia - VIP",
+   "Elevation": 109,
+   "Latitude": 38.0656,
+   "Longitude": -122.1507,
+   "FullAQSCode": "060950006",
+   "IsActive": 0
+ },
+ {
+   "StationID": "1026",
+   "Name": "Berkeley - Sixth St",
+   "Elevation": 6,
+   "Latitude": 37.877794,
+   "Longitude": -122.30129,
+   "FullAQSCode": "060012004",
+   "IsActive": 0
+ },
+ {
+   "StationID": "99999",
+   "Name": "Archive",
+   "Elevation": 0,
+   "Latitude": 38,
+   "Longitude": -124,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "7034",
+   "Name": "Cupertino Prado Vista",
+   "Elevation": 122,
+   "Latitude": 37.321615,
+   "Longitude": -122.071288,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "1027",
+   "Name": "Oakland West",
+   "Elevation": 0,
+   "Latitude": 37.814781,
+   "Longitude": -122.282347,
+   "FullAQSCode": "060010011",
+   "IsActive": 1
+ },
+ {
+   "StationID": "7957",
+   "Name": "m_Cupertino Prado Vista",
+   "Elevation": 122,
+   "Latitude": 37.3216,
+   "Longitude": -122.0714,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "7803",
+   "Name": "m_Stanford",
+   "Elevation": 37,
+   "Latitude": 37.42936,
+   "Longitude": -122.18533,
+   "FullAQSCode": "060856001",
+   "IsActive": 1
+ },
+ {
+   "StationID": "1808",
+   "Name": "m_UC Berkeley",
+   "Elevation": 58,
+   "Latitude": 37.86969,
+   "Longitude": -122.26758,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "5801",
+   "Name": "m_San Francisco STP",
+   "Elevation": 5,
+   "Latitude": 37.74053,
+   "Longitude": -122.39133,
+   "FullAQSCode": "060759900",
+   "IsActive": 1
+ },
+ {
+   "StationID": "5803",
+   "Name": "m_Mission Bay",
+   "Elevation": 2,
+   "Latitude": 37.77219,
+   "Longitude": -122.39467,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "1804",
+   "Name": "m_Oakland STP",
+   "Elevation": 3,
+   "Latitude": 37.82575,
+   "Longitude": -122.29886,
+   "FullAQSCode": "060019900",
+   "IsActive": 1
+ },
+ {
+   "StationID": "99908",
+   "Name": "Vallejo Shop",
+   "Elevation": 6,
+   "Latitude": 38.1027,
+   "Longitude": -122.2382,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "99907",
+   "Name": "Oakland E Shop",
+   "Elevation": 11,
+   "Latitude": 37.81715,
+   "Longitude": -122.28048,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 1
+ },
+ {
+   "StationID": "2803",
+   "Name": "m_Dow Chemical",
+   "Elevation": 3,
+   "Latitude": 38.02044,
+   "Longitude": -121.8459,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 1
+ },
+ {
+   "StationID": "1811",
+   "Name": "m_Site 300",
+   "Elevation": 379,
+   "Latitude": 37.67526,
+   "Longitude": -121.541,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 1
+ },
+ {
+   "StationID": "1801",
+   "Name": "m_Livermore Lab",
+   "Elevation": 184,
+   "Latitude": 37.694,
+   "Longitude": -121.7163,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 1
+ },
+ {
+   "StationID": "6801",
+   "Name": "m_San Mateo STP",
+   "Elevation": 9,
+   "Latitude": 37.56833,
+   "Longitude": -122.2035,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 1
+ },
+ {
+   "StationID": "5802",
+   "Name": "m_Sanitary Fill",
+   "Elevation": 24,
+   "Latitude": 37.7095,
+   "Longitude": -122.3988,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "7802",
+   "Name": "m_Kaiser Cement",
+   "Elevation": 250,
+   "Latitude": 37.31561,
+   "Longitude": -122.0918,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 1
+ },
+ {
+   "StationID": "2804",
+   "Name": "m_Contra Costa Power",
+   "Elevation": 3,
+   "Latitude": 38.01533,
+   "Longitude": -121.7623,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 1
+ },
+ {
+   "StationID": "2802",
+   "Name": "m_Concord STP",
+   "Elevation": 0,
+   "Latitude": 37.999615,
+   "Longitude": -122.068726,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 1
+ },
+ {
+   "StationID": "6802",
+   "Name": "m_Silicon Valley Clean Water",
+   "Elevation": 0,
+   "Latitude": 37.54544,
+   "Longitude": -122.2316,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 1
+ },
+ {
+   "StationID": "2801",
+   "Name": "m_Pittsburg",
+   "Elevation": 0,
+   "Latitude": 38.04,
+   "Longitude": -121.9221,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "9804",
+   "Name": "m_Santa Rosa PGE",
+   "Elevation": 46,
+   "Latitude": 39.497058,
+   "Longitude": -122.760833,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "1803",
+   "Name": "m_NUMMI",
+   "Elevation": 9,
+   "Latitude": 37.50214,
+   "Longitude": -121.9434,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "2806",
+   "Name": "m_Clayton",
+   "Elevation": 98,
+   "Latitude": 37.944919,
+   "Longitude": -121.969172,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "1802",
+   "Name": "m_Site 300 (old)",
+   "Elevation": 381,
+   "Latitude": 37.65356,
+   "Longitude": -121.5238,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "99906",
+   "Name": "eLog_QC Templates",
+   "Elevation": 0,
+   "Latitude": 38,
+   "Longitude": -124,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 1
+ },
+ {
+   "StationID": "2037",
+   "Name": "San Ramon",
+   "Elevation": 120,
+   "Latitude": 37.743649,
+   "Longitude": -121.934188,
+   "FullAQSCode": "060132007",
+   "IsActive": 1
+ },
+ {
+   "StationID": "1028",
+   "Name": "Patterson Pass",
+   "Elevation": 526,
+   "Latitude": 37.689615,
+   "Longitude": -121.631916,
+   "FullAQSCode": "060012005",
+   "IsActive": 0
+ },
+ {
+   "StationID": "2703",
+   "Name": "m_Chevron",
+   "Elevation": 2,
+   "Latitude": 37.95383,
+   "Longitude": -122.3797,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "8704",
+   "Name": "m_Valero Admin",
+   "Elevation": 55,
+   "Latitude": 38.07444,
+   "Longitude": -122.1444,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "8702",
+   "Name": "m_Valero Warehouse",
+   "Elevation": 15,
+   "Latitude": 38.07228,
+   "Longitude": -122.1265,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "2752",
+   "Name": "m_Tesoro",
+   "Elevation": 3,
+   "Latitude": 38.03128,
+   "Longitude": -122.0782,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "2742",
+   "Name": "m_Shell East",
+   "Elevation": 5,
+   "Latitude": 38.01439,
+   "Longitude": -122.1036,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "2743",
+   "Name": "m_Shell West",
+   "Elevation": 1,
+   "Latitude": 38.02597,
+   "Longitude": -122.1297,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "2771",
+   "Name": "m_ConocoPhillips Rodeo",
+   "Elevation": 11,
+   "Latitude": 38.04008,
+   "Longitude": -122.2611,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "2774",
+   "Name": "m_ConocoPhillips Hillcrest",
+   "Elevation": 23,
+   "Latitude": 38.03358,
+   "Longitude": -122.2586,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "2760",
+   "Name": "m_ConocoPhillips Carbon",
+   "Elevation": 24,
+   "Latitude": 38.01656,
+   "Longitude": -122.2367,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "2763",
+   "Name": "m_ConocoPhillips Cummings",
+   "Elevation": 225,
+   "Latitude": 38.02815,
+   "Longitude": -122.2069,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "7036",
+   "Name": "Cupertino Monta Vista",
+   "Elevation": 124,
+   "Latitude": 37.318435,
+   "Longitude": -122.069705,
+   "FullAQSCode": "060852009",
+   "IsActive": 0
+ },
+ {
+   "StationID": "7958",
+   "Name": "m_Cupertino Monta Vista",
+   "Elevation": 123,
+   "Latitude": 37.318029,
+   "Longitude": -122.068876,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "7601",
+   "Name": "m_KSJC - San Jose",
+   "Elevation": 16,
+   "Latitude": 37.359403,
+   "Longitude": -121.924423,
+   "FullAQSCode": "060855555",
+   "IsActive": 0
+ },
+ {
+   "StationID": "7602",
+   "Name": "m_KNUQ - Moffet NAS",
+   "Elevation": 10,
+   "Latitude": 37.405912,
+   "Longitude": -122.04904,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "9601",
+   "Name": "m_KSTS - Santa Rosa",
+   "Elevation": 35,
+   "Latitude": 38.503683,
+   "Longitude": -122.810972,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "0601",
+   "Name": "m_KMOD - Modesto",
+   "Elevation": 26,
+   "Latitude": 37.625441,
+   "Longitude": -120.954897,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "0602",
+   "Name": "m_KSAC - Sacramento Exec",
+   "Elevation": 5,
+   "Latitude": 38.506584,
+   "Longitude": -121.496021,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "0603",
+   "Name": "m_KSMF - Sacramento Metro",
+   "Elevation": 7,
+   "Latitude": 38.700705,
+   "Longitude": -121.59477,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "0604",
+   "Name": "m_KSCK - Stockton",
+   "Elevation": 8,
+   "Latitude": 37.889967,
+   "Longitude": -121.226354,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "0605",
+   "Name": "m_KWVI - Watsonville",
+   "Elevation": 49,
+   "Latitude": 36.939363,
+   "Longitude": -121.789982,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "0606",
+   "Name": "m_KRDD - Redding",
+   "Elevation": 152,
+   "Latitude": 40.514602,
+   "Longitude": -122.297697,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "0607",
+   "Name": "m_KRBL - Red Bluff",
+   "Elevation": 108,
+   "Latitude": 40.151864,
+   "Longitude": -122.254769,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "0608",
+   "Name": "m_KOVE - Oroville",
+   "Elevation": 56,
+   "Latitude": 39.4943,
+   "Longitude": -121.622247,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "0609",
+   "Name": "m_KMYV - Marysville",
+   "Elevation": 18,
+   "Latitude": 39.102032,
+   "Longitude": -121.568812,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "0610",
+   "Name": "m_KVCB - Vacaville",
+   "Elevation": 31,
+   "Latitude": 38.377535,
+   "Longitude": -121.958537,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "0612",
+   "Name": "m_KMAE - Madera",
+   "Elevation": 76,
+   "Latitude": 36.985047,
+   "Longitude": -120.110653,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "0613",
+   "Name": "m_KFAT - Fresno",
+   "Elevation": 101,
+   "Latitude": 36.780002,
+   "Longitude": -119.720149,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "0614",
+   "Name": "m_KHJO - Hanford",
+   "Elevation": 75,
+   "Latitude": 36.311429,
+   "Longitude": -119.623159,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "0615",
+   "Name": "m_KBFL - Bakersfield",
+   "Elevation": 149,
+   "Latitude": 35.434259,
+   "Longitude": -119.055212,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "1601",
+   "Name": "m_KOAK - Oakland",
+   "Elevation": 1,
+   "Latitude": 37.717821,
+   "Longitude": -122.232936,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "1602",
+   "Name": "m_KHWD - Hayward",
+   "Elevation": 10,
+   "Latitude": 37.660221,
+   "Longitude": -122.11907,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "1603",
+   "Name": "m_KLVK - Livermore",
+   "Elevation": 119,
+   "Latitude": 37.693115,
+   "Longitude": -121.814759,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "2601",
+   "Name": "m_KCCR - Concord",
+   "Elevation": 7,
+   "Latitude": 37.991686,
+   "Longitude": -122.052641,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "4601",
+   "Name": "m_KAPC - Napa",
+   "Elevation": 4,
+   "Latitude": 38.207506,
+   "Longitude": -122.280388,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "5601",
+   "Name": "m_KSFO - San Francisco",
+   "Elevation": 2,
+   "Latitude": 37.619636,
+   "Longitude": -122.365578,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "0611",
+   "Name": "m_KMCE - Merced",
+   "Elevation": 46,
+   "Latitude": 37.285917,
+   "Longitude": -120.517981,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "7907",
+   "Name": "m_San Jose",
+   "Elevation": 21,
+   "Latitude": 37.348497,
+   "Longitude": -121.894898,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "0616",
+   "Name": "m_KACV - Arcata",
+   "Elevation": 61,
+   "Latitude": 40.978,
+   "Longitude": -124.109,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "0617",
+   "Name": "m_KWMC - Winnemucca",
+   "Elevation": 1309,
+   "Latitude": 40.901796,
+   "Longitude": -117.808207,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "3007",
+   "Name": "Ft. Cronkhite",
+   "Elevation": 6,
+   "Latitude": 37.832725,
+   "Longitude": -122.527658,
+   "FullAQSCode": "060410004",
+   "IsActive": 1
+ },
+ {
+   "StationID": "2908",
+   "Name": "m_San Ramon",
+   "Elevation": 119,
+   "Latitude": 37.7436,
+   "Longitude": -121.9341,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "99901",
+   "Name": "Test1",
+   "Elevation": 0,
+   "Latitude": 38,
+   "Longitude": -124,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 1
+ },
+ {
+   "StationID": "99902",
+   "Name": "Test2",
+   "Elevation": 0,
+   "Latitude": 38,
+   "Longitude": -124,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 1
+ },
+ {
+   "StationID": "2201",
+   "Name": "Chevron Castro",
+   "Elevation": 3,
+   "Latitude": 37.94281,
+   "Longitude": -122.375436,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "2202",
+   "Name": "Chevron Golden Gate",
+   "Elevation": 50,
+   "Latitude": 37.931018,
+   "Longitude": -122.394256,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "2203",
+   "Name": "Chevron Gertrude",
+   "Elevation": 5,
+   "Latitude": 37.953808,
+   "Longitude": -122.379557,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "8201",
+   "Name": "Valero Gas Station",
+   "Elevation": 57,
+   "Latitude": 38.059536,
+   "Longitude": -122.149563,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "8202",
+   "Name": "Valero Warehouse",
+   "Elevation": 14,
+   "Latitude": 38.072178,
+   "Longitude": -122.126793,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "8203",
+   "Name": "Valero Wastewater",
+   "Elevation": 4,
+   "Latitude": 38.067442,
+   "Longitude": -122.123712,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "2241",
+   "Name": "Shell Shell Ave",
+   "Elevation": 25,
+   "Latitude": 38.016792,
+   "Longitude": -122.11771,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 1
+ },
+ {
+   "StationID": "2242",
+   "Name": "Shell Ace Hardware",
+   "Elevation": 9,
+   "Latitude": 38.012304,
+   "Longitude": -122.105158,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 1
+ },
+ {
+   "StationID": "2243",
+   "Name": "Shell Mt. View",
+   "Elevation": 4,
+   "Latitude": 38.018579,
+   "Longitude": -122.101955,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 1
+ },
+ {
+   "StationID": "2244",
+   "Name": "Shell East Levee Gate",
+   "Elevation": 4,
+   "Latitude": 38.024975,
+   "Longitude": -122.123281,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 1
+ },
+ {
+   "StationID": "2251",
+   "Name": "Tesoro Waterfront",
+   "Elevation": 2,
+   "Latitude": 38.035542,
+   "Longitude": -122.071872,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "2252",
+   "Name": "Tesoro Chenery",
+   "Elevation": 4,
+   "Latitude": 38.022655,
+   "Longitude": -122.043313,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "2253",
+   "Name": "Tesoro Pacheco Slough",
+   "Elevation": 2,
+   "Latitude": 38.032259,
+   "Longitude": -122.080098,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "2254",
+   "Name": "Tesoro Gun Club",
+   "Elevation": 3,
+   "Latitude": 38.016957,
+   "Longitude": -122.080762,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "2271",
+   "Name": "ConocoPhillips E Refinery",
+   "Elevation": 82,
+   "Latitude": 38.044758,
+   "Longitude": -122.2367,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "2273",
+   "Name": "ConocoPhillips Crockett",
+   "Elevation": 62,
+   "Latitude": 38.054113,
+   "Longitude": -122.217148,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "2274",
+   "Name": "ConocoPhillips Hillcrest",
+   "Elevation": 32,
+   "Latitude": 38.033572,
+   "Longitude": -122.258536,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "2275",
+   "Name": "ConocoPhillips Tormey",
+   "Elevation": 9,
+   "Latitude": 38.048699,
+   "Longitude": -122.248809,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "2263",
+   "Name": "ConocoPhillips Cummings Skyway",
+   "Elevation": 231,
+   "Latitude": 38.02816,
+   "Longitude": -122.206872,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "1908",
+   "Name": "m_Patterson Pass",
+   "Elevation": 526,
+   "Latitude": 37.689615,
+   "Longitude": -121.631916,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "1805",
+   "Name": "m_Berkeley Lab",
+   "Elevation": 274,
+   "Latitude": 37.877128,
+   "Longitude": -122.248569,
+   "FullAQSCode": "060016005",
+   "IsActive": 1
+ },
+ {
+   "StationID": "2713",
+   "Name": "m_Gaylord",
+   "Elevation": 9,
+   "Latitude": 38.017832,
+   "Longitude": -121.768064,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "7959",
+   "Name": "m_Cupertino Stevens Creek School",
+   "Elevation": 106,
+   "Latitude": 37.327742,
+   "Longitude": -122.063494,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "7905",
+   "Name": "m_Alviso",
+   "Elevation": 1,
+   "Latitude": 37.434694,
+   "Longitude": -121.952777,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "2805",
+   "Name": "m_Calpine",
+   "Elevation": 8,
+   "Latitude": 38.0165,
+   "Longitude": -121.830805,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "1806",
+   "Name": "m_HP Newark",
+   "Elevation": 5,
+   "Latitude": 37.518888,
+   "Longitude": -122.005777,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "8804",
+   "Name": "m_Grizzly Island",
+   "Elevation": 0,
+   "Latitude": 38.092,
+   "Longitude": -121.887,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "5853",
+   "Name": "m_Hunters Point Shipyard",
+   "Elevation": 4,
+   "Latitude": 37.721888,
+   "Longitude": -122.369888,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "5851",
+   "Name": "m_Hunters Point PGE",
+   "Elevation": 4,
+   "Latitude": 37.739722,
+   "Longitude": -122.376694,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "7801",
+   "Name": "m_IBM",
+   "Elevation": 60,
+   "Latitude": 37.24724,
+   "Longitude": -121.790283,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "0801",
+   "Name": "m_Los Banos PGE",
+   "Elevation": 94,
+   "Latitude": 37.054,
+   "Longitude": -120.019,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "0896",
+   "Name": "m_Manteca",
+   "Elevation": 10,
+   "Latitude": 37.636,
+   "Longitude": -121.186,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "8803",
+   "Name": "m_Mare Island",
+   "Elevation": 5,
+   "Latitude": 38.101083,
+   "Longitude": -122.272361,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "5852",
+   "Name": "m_Potero Power PGE",
+   "Elevation": 1,
+   "Latitude": 37.757416,
+   "Longitude": -122.381416,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "6851",
+   "Name": "m_Redwood City",
+   "Elevation": 2,
+   "Latitude": 37.514888,
+   "Longitude": -122.199888,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "1809",
+   "Name": "m_San Leandro PGE",
+   "Elevation": 12,
+   "Latitude": 37.710166,
+   "Longitude": -122.148333,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "0802",
+   "Name": "m_San Luis Reservior",
+   "Elevation": 186,
+   "Latitude": 37.08,
+   "Longitude": -121.094,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "2722",
+   "Name": "m_ITC",
+   "Elevation": 2,
+   "Latitude": 38.018638,
+   "Longitude": -122.071416,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "2730",
+   "Name": "m_Pacific Refinery",
+   "Elevation": 34,
+   "Latitude": 38.025527,
+   "Longitude": -122.268666,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "1953",
+   "Name": "m_Altamont Pass",
+   "Elevation": 350,
+   "Latitude": 37.71793,
+   "Longitude": -121.66106,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "8951",
+   "Name": "m_Cement Hill",
+   "Elevation": 242,
+   "Latitude": 38.299805,
+   "Longitude": -122.001972,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "2902",
+   "Name": "m_Danville",
+   "Elevation": 119,
+   "Latitude": 37.809722,
+   "Longitude": -121.993027,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "1902",
+   "Name": "m_Fremont",
+   "Elevation": 15,
+   "Latitude": 37.545,
+   "Longitude": -121.990833,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "7903",
+   "Name": "m_Gilroy Foods",
+   "Elevation": 53,
+   "Latitude": 37.001361,
+   "Longitude": -121.575722,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "7956",
+   "Name": "m_Gilroy East",
+   "Elevation": 68,
+   "Latitude": 37.047,
+   "Longitude": -121.552,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "3801",
+   "Name": "m_San Rafael Rock Quarry",
+   "Elevation": 56,
+   "Latitude": 37.992305,
+   "Longitude": -122.461166,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "8802",
+   "Name": "m_Vaca-Dixon",
+   "Elevation": 80,
+   "Latitude": 38.405422,
+   "Longitude": -121.919233,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 1
+ },
+ {
+   "StationID": "1810",
+   "Name": "m_Harrison Park",
+   "Elevation": 4,
+   "Latitude": 37.881,
+   "Longitude": -122.305,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "1901",
+   "Name": "m_Union City",
+   "Elevation": 2,
+   "Latitude": 37.593361,
+   "Longitude": -122.073333,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "7954",
+   "Name": "m_Spikes Peak",
+   "Elevation": 588,
+   "Latitude": 37.03475,
+   "Longitude": -121.219916,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "7018",
+   "Name": "San Jose - W San Carlos",
+   "Elevation": 37,
+   "Latitude": 37.32316,
+   "Longitude": -121.9262,
+   "FullAQSCode": "060852004",
+   "IsActive": 0
+ },
+ {
+   "StationID": "5951",
+   "Name": "m_San Francisco - Arkansas St.",
+   "Elevation": 5,
+   "Latitude": 37.766,
+   "Longitude": -122.399,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "7953",
+   "Name": "m_Gilroy West",
+   "Elevation": 84,
+   "Latitude": 36.997,
+   "Longitude": -121.589,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "5907",
+   "Name": "m_Hunters Point",
+   "Elevation": 82,
+   "Latitude": 37.733777,
+   "Longitude": -122.382388,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "1906",
+   "Name": "m_Livermore - old 1st St.",
+   "Elevation": 150,
+   "Latitude": 37.684916,
+   "Longitude": -121.765916,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "7951",
+   "Name": "m_Morgan Hill",
+   "Elevation": 111,
+   "Latitude": 37.136,
+   "Longitude": -121.646,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "7904",
+   "Name": "m_Mt. Hamilton",
+   "Elevation": 1335,
+   "Latitude": 37.346777,
+   "Longitude": -121.629833,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "6902",
+   "Name": "m_Mt. Pise",
+   "Elevation": 621,
+   "Latitude": 37.450472,
+   "Longitude": -122.339416,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "7952",
+   "Name": "m_Mt. Umunhum",
+   "Elevation": 1018,
+   "Latitude": 37.159666,
+   "Longitude": -121.909138,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "4901",
+   "Name": "m_Napa Sanitation",
+   "Elevation": 6,
+   "Latitude": 38.284888,
+   "Longitude": -122.281333,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "7955",
+   "Name": "m_Pacheco Pass",
+   "Elevation": 421,
+   "Latitude": 37.062888,
+   "Longitude": -121.21475,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "9901",
+   "Name": "m_Petaluma",
+   "Elevation": 24,
+   "Latitude": 38.259694,
+   "Longitude": -122.61125,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "7902",
+   "Name": "m_San Jose Airport - BAAQMD",
+   "Elevation": 17,
+   "Latitude": 37.355944,
+   "Longitude": -121.926055,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "6951",
+   "Name": "m_Pillar Point",
+   "Elevation": 34,
+   "Latitude": 37.504527,
+   "Longitude": -122.498805,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "1807",
+   "Name": "m_Berkeley Lab (old)",
+   "Elevation": 290,
+   "Latitude": 37.867666,
+   "Longitude": -122.24725,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "1812",
+   "Name": "m_Port of Oakland",
+   "Elevation": 1,
+   "Latitude": 37.807861,
+   "Longitude": -122.31375,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "2018",
+   "Name": "Concord - 2975 Treat",
+   "Elevation": 25,
+   "Latitude": 37.9385,
+   "Longitude": -122.0263,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "8002",
+   "Name": "Fairfield - Gregory",
+   "Elevation": 4,
+   "Latitude": 38.2455,
+   "Longitude": -122.0539,
+   "FullAQSCode": "060950002",
+   "IsActive": 0
+ },
+ {
+   "StationID": "1017",
+   "Name": "Livermore - Old First",
+   "Elevation": 150,
+   "Latitude": 37.6849,
+   "Longitude": -121.7659,
+   "FullAQSCode": "060010003",
+   "IsActive": 0
+ },
+ {
+   "StationID": "1016",
+   "Name": "Oakland - Alice",
+   "Elevation": 10,
+   "Latitude": 37.7986,
+   "Longitude": -122.2684,
+   "FullAQSCode": "060010005",
+   "IsActive": 0
+ },
+ {
+   "StationID": "5009",
+   "Name": "San Francisco - Ellis St",
+   "Elevation": 42,
+   "Latitude": 37.784,
+   "Longitude": -122.4216,
+   "FullAQSCode": "060750003",
+   "IsActive": 0
+ },
+ {
+   "StationID": "5012",
+   "Name": "San Francisco Bayview Hunters Point",
+   "Elevation": 82,
+   "Latitude": 37.7338,
+   "Longitude": -122.3824,
+   "FullAQSCode": "060750006",
+   "IsActive": 0
+ },
+ {
+   "StationID": "7009",
+   "Name": "San Jose - 4th St",
+   "Elevation": 25,
+   "Latitude": 37.339666,
+   "Longitude": -121.888575,
+   "FullAQSCode": "060850004",
+   "IsActive": 1
+ },
+ {
+   "StationID": "7026",
+   "Name": "San Jose - Piedmont",
+   "Elevation": 62,
+   "Latitude": 37.3915,
+   "Longitude": -121.8422,
+   "FullAQSCode": "060852005",
+   "IsActive": 0
+ },
+ {
+   "StationID": "2030",
+   "Name": "San Pablo - El Portal Center",
+   "Elevation": 15,
+   "Latitude": 37.9642,
+   "Longitude": -122.3403,
+   "FullAQSCode": "060131003",
+   "IsActive": 0
+ },
+ {
+   "StationID": "99903",
+   "Name": "Test3",
+   "Elevation": 0,
+   "Latitude": 38,
+   "Longitude": -124,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 1
+ },
+ {
+   "StationID": "6008",
+   "Name": "San Carlos Airport I",
+   "Elevation": 1,
+   "Latitude": 37.508813,
+   "Longitude": -122.247291,
+   "FullAQSCode": "060812002",
+   "IsActive": 0
+ },
+ {
+   "StationID": "7037",
+   "Name": "Palo Alto Airport",
+   "Elevation": 2,
+   "Latitude": 37.457621,
+   "Longitude": -122.112286,
+   "FullAQSCode": "060852010",
+   "IsActive": 0
+ },
+ {
+   "StationID": "7038",
+   "Name": "Reid Hillview Airport",
+   "Elevation": 41,
+   "Latitude": 37.329841,
+   "Longitude": -121.815438,
+   "FullAQSCode": "060852011",
+   "IsActive": 1
+ },
+ {
+   "StationID": "7013",
+   "Name": "Mountain View - Cuesta",
+   "Elevation": 43,
+   "Latitude": 37.3735,
+   "Longitude": -122.077,
+   "FullAQSCode": "060851002",
+   "IsActive": 0
+ },
+ {
+   "StationID": "99905",
+   "Name": "Concord Storage",
+   "Elevation": 26,
+   "Latitude": 37.936013,
+   "Longitude": -122.026154,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 1
+ },
+ {
+   "StationID": "99904",
+   "Name": "Fremont Storage",
+   "Elevation": 17,
+   "Latitude": 37.535833,
+   "Longitude": -121.961823,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 1
+ },
+ {
+   "StationID": "3009",
+   "Name": "Forest Knolls",
+   "Elevation": 75,
+   "Latitude": 38.015136,
+   "Longitude": -122.689531,
+   "FullAQSCode": "060412001",
+   "IsActive": 1
+ },
+ {
+   "StationID": "6009",
+   "Name": "Redwood City - Twin Dolphin",
+   "Elevation": 2,
+   "Latitude": 37.518769,
+   "Longitude": -122.249353,
+   "FullAQSCode": "060812003",
+   "IsActive": 0
+ },
+ {
+   "StationID": "2032",
+   "Name": "Concord - Arnold Ind. Way",
+   "Elevation": 18,
+   "Latitude": 38.0106,
+   "Longitude": -122.0291,
+   "FullAQSCode": "060132006",
+   "IsActive": 0
+ },
+ {
+   "StationID": "2026",
+   "Name": "Walnut Creek",
+   "Elevation": 60,
+   "Latitude": 37.9085,
+   "Longitude": -122.0693,
+   "FullAQSCode": "060132005",
+   "IsActive": 0
+ },
+ {
+   "StationID": "2025",
+   "Name": "Martinez -Pacheco Blvd",
+   "Elevation": 4,
+   "Latitude": 38.0066,
+   "Longitude": -122.0908,
+   "FullAQSCode": "060132004",
+   "IsActive": 0
+ },
+ {
+   "StationID": "7033",
+   "Name": "Mountain View - Whisman Park",
+   "Elevation": 18,
+   "Latitude": 37.40047,
+   "Longitude": -122.06658,
+   "FullAQSCode": "060852008",
+   "IsActive": 0
+ },
+ {
+   "StationID": "1018",
+   "Name": "Oakland - Davie Stadium",
+   "Elevation": 46,
+   "Latitude": 37.816361,
+   "Longitude": -122.230388,
+   "FullAQSCode": "060012003",
+   "IsActive": 0
+ },
+ {
+   "StationID": "2024",
+   "Name": "Antioch",
+   "Elevation": 2,
+   "Latitude": 38.00956,
+   "Longitude": -121.8211,
+   "FullAQSCode": "060132003",
+   "IsActive": 0
+ },
+ {
+   "StationID": "1010",
+   "Name": "San Leandro - Thorton",
+   "Elevation": 16,
+   "Latitude": 37.7184,
+   "Longitude": -122.161,
+   "FullAQSCode": "060015001",
+   "IsActive": 0
+ },
+ {
+   "StationID": "2011",
+   "Name": "Richmond - 13th St",
+   "Elevation": 12,
+   "Latitude": 37.9504,
+   "Longitude": -122.3558,
+   "FullAQSCode": "060130003",
+   "IsActive": 0
+ },
+ {
+   "StationID": "9005",
+   "Name": "Sebastopol",
+   "Elevation": 19,
+   "Latitude": 38.403765,
+   "Longitude": -122.818294,
+   "FullAQSCode": "060970004",
+   "IsActive": 1
+ },
+ {
+   "StationID": "9006",
+   "Name": "Santa Rosa - Bennett Valley",
+   "Elevation": 72,
+   "Latitude": 38.436603,
+   "Longitude": -122.6616,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "9007",
+   "Name": "Santa Rosa - Rincon Valley",
+   "Elevation": 86,
+   "Latitude": 38.472652,
+   "Longitude": -122.660702,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "9008",
+   "Name": "Santa Rosa - NW",
+   "Elevation": 35,
+   "Latitude": 38.450266,
+   "Longitude": -122.750554,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "9009",
+   "Name": "Santa Rosa - SW",
+   "Elevation": 37,
+   "Latitude": 38.414842,
+   "Longitude": -122.732826,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "9010",
+   "Name": "Santa Rosa - Jr. College",
+   "Elevation": 51,
+   "Latitude": 38.456632,
+   "Longitude": -122.711153,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "1029",
+   "Name": "Laney College",
+   "Elevation": 4,
+   "Latitude": 37.793624,
+   "Longitude": -122.263376,
+   "FullAQSCode": "060010012",
+   "IsActive": 1
+ },
+ {
+   "StationID": "1030",
+   "Name": "Berkeley Aquatic Park",
+   "Elevation": 3,
+   "Latitude": 37.864767,
+   "Longitude": -122.302741,
+   "FullAQSCode": "060010013",
+   "IsActive": 1
+ },
+ {
+   "StationID": "7039",
+   "Name": "San Jose - Knox Av",
+   "Elevation": 31,
+   "Latitude": 37.338135,
+   "Longitude": -121.849783,
+   "FullAQSCode": "060850006",
+   "IsActive": 1
+ },
+ {
+   "StationID": "0105",
+   "Name": "Eureka - Humbolt Hill",
+   "Elevation": 21,
+   "Latitude": 40.776994,
+   "Longitude": -124.1775,
+   "FullAQSCode": "060231004",
+   "IsActive": 0
+ },
+ {
+   "StationID": "0104",
+   "Name": "Eureka - Jacobs",
+   "Elevation": 172,
+   "Latitude": 40.71528,
+   "Longitude": -124.20139,
+   "FullAQSCode": "060231005",
+   "IsActive": 0
+ },
+ {
+   "StationID": "0103",
+   "Name": "Salinas",
+   "Elevation": 22,
+   "Latitude": 36.69683,
+   "Longitude": -121.637182,
+   "FullAQSCode": "060531003",
+   "IsActive": 0
+ },
+ {
+   "StationID": "0106",
+   "Name": "Pearl City",
+   "Elevation": 23,
+   "Latitude": 21.39283,
+   "Longitude": -157.96913,
+   "FullAQSCode": "150032004",
+   "IsActive": 0
+ },
+ {
+   "StationID": "6010",
+   "Name": "San Carlos Airport II",
+   "Elevation": 1,
+   "Latitude": 37.508162,
+   "Longitude": -122.246305,
+   "FullAQSCode": "060812004",
+   "IsActive": 1
+ },
+ {
+   "StationID": "4002",
+   "Name": "Napa - Napa Valley College",
+   "Elevation": 0,
+   "Latitude": 38.278849,
+   "Longitude": -122.275024,
+   "FullAQSCode": "06055NAPA",
+   "IsActive": 1
+ },
+ {
+   "StationID": "2753",
+   "Name": "m_Waterfront",
+   "Elevation": 0,
+   "Latitude": 38,
+   "Longitude": -124,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "9311",
+   "Name": "Bodega Bay - GHG",
+   "Elevation": 21,
+   "Latitude": 38.318756,
+   "Longitude": -123.072528,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 1
+ },
+ {
+   "StationID": "2321",
+   "Name": "Bethel Island - GHG",
+   "Elevation": -2,
+   "Latitude": 38.006311,
+   "Longitude": -121.641918,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 1
+ },
+ {
+   "StationID": "7322",
+   "Name": "San Martin - GHG",
+   "Elevation": 86,
+   "Latitude": 37.079379,
+   "Longitude": -121.600031,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 1
+ },
+ {
+   "StationID": "1328",
+   "Name": "Patterson Pass - GHG",
+   "Elevation": 526,
+   "Latitude": 37.689615,
+   "Longitude": -121.631916,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 1
+ },
+ {
+   "StationID": "5908",
+   "Name": "San Francisco - Beale",
+   "Elevation": 0,
+   "Latitude": 37.788117,
+   "Longitude": -122.391086,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 1
+ },
+ {
+   "StationID": "1031",
+   "Name": "Pleasanton - Owens Ct",
+   "Elevation": 100,
+   "Latitude": 37.701222,
+   "Longitude": -121.903019,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 0
+ },
+ {
+   "StationID": "1323",
+   "Name": "Livermore - GHG",
+   "Elevation": 137,
+   "Latitude": 37.687526,
+   "Longitude": -121.784217,
+   "FullAQSCode": "N/A      ",
+   "IsActive": 1
+ },
+ {
+   "StationID": "0107",
+   "Name": "San Lorenzo Valley Middle School",
+   "Elevation": 350,
+   "Latitude": 37.0625,
+   "Longitude": -122.0819,
+   "FullAQSCode": "060531005",
+   "IsActive": 0
+ }
+]

@@ -1,0 +1,101 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{intrument.SiteName}}/{{intrument.Name}}</ion-title>
+  </ion-navbar>
+  <ion-toolbar color="primary">
+    <ion-buttons left>
+      <button ion-button (click)="close()">Cancel</button>
+    </ion-buttons>
+    <ion-buttons right>
+      <button [disabled]="saveDisabled" ion-button (click)="save()">Save</button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12>
+        <ion-item>
+          <ion-note item-left>Manufacturer:</ion-note>
+          <ion-label>{{intrument.Manufacturer}}</ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-7>
+        <ion-item>
+          <ion-note item-left>PurchaseDate:</ion-note>
+          <ion-label>{{intrument.PurchaseDate | date: 'yyyy-M-d'}}</ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col col-5>
+        <ion-item>
+          <ion-label>IsActive:</ion-label>
+          <ion-checkbox color='secondary' checked="false" [(ngModel)]='intrument.IsActive'></ion-checkbox>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-7>
+        <ion-item>
+          <ion-note item-left>Model:</ion-note>
+          <ion-label>{{intrument.Model}}</ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col col-5>
+        <ion-item>
+          <ion-note item-left>SerialNo:</ion-note>
+          <ion-label>{{intrument.SerialNo}}</ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6>
+        <ion-item>
+          <ion-note item-left>DurationID:</ion-note>
+          <ion-label>{{intrument.DurationID}}</ion-label>
+        </ion-item>
+      </ion-col>
+      <ion-col col-6>
+        <ion-item>
+          <ion-note item-left>FrequencyID:</ion-note>
+          <ion-label>{{intrument.FrequencyID}}</ion-label>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-card>
+    <ion-card-header>
+      {{currentLog?.name}}
+    </ion-card-header>
+    <ion-card-content>
+      <p>Ticket: <strong>${{currentLog?.price}}</strong></p>
+      <p>Date: <strong>{{currentLog?.date}}</strong></p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="add-guest-form">
+    <ion-card-header>
+      Add Guests
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list no-lines>
+        <ion-item>
+          <ion-label stacked>Name</ion-label>
+          <ion-input [(ngModel)]="guestName" type="text" placeholder="What's your guest's name?"></ion-input>
+        </ion-item>
+        <span *ngIf="guestPicture">Picture taken!</span>
+
+        <button ion-button color="primary" block (click)="takePicture()">
+          Take a Picture
+        </button>
+
+        <button ion-button color="primary" block (click)="addGuest(guestName)">
+          Add Guest
+        </button>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

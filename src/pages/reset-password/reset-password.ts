@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, AlertController } from 'ionic-angular';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
-import { AuthProvider } from '../../providers/auth/auth';
+import { AuthService } from '../../providers/auth-service';
 import { EmailValidator } from '../../validators/email';
 
 
@@ -15,7 +15,7 @@ import { EmailValidator } from '../../validators/email';
 export class ResetPasswordPage {
   public resetPasswordForm: FormGroup;
   
-  constructor(public navCtrl: NavController, public authProvider: AuthProvider, 
+  constructor(public navCtrl: NavController, public auth: AuthService, 
     public formBuilder: FormBuilder, public alertCtrl: AlertController) {
       
       this.resetPasswordForm = formBuilder.group({
@@ -27,7 +27,7 @@ export class ResetPasswordPage {
     if (!this.resetPasswordForm.valid){
       console.log(this.resetPasswordForm.value);
     } else {
-      this.authProvider.resetPassword(this.resetPasswordForm.value.email)
+      this.auth.resetPassword(this.resetPasswordForm.value.email)
       .then((user) => {
         let alert = this.alertCtrl.create({
           message: "We just sent you a reset link to your email",

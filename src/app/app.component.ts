@@ -3,9 +3,12 @@ import { Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { HomePage } from '../pages/home/home';
+//import { HomePage } from '../pages/home/home';
+import { HomeTabs } from '../pages/home/home-tabs';
 
-import firebase from 'firebase';
+import { AngularFireAuth } from 'angularfire2/auth';
+// Do not import from 'firebase' as you'll lose the tree shaking benefits
+import * as firebase from 'firebase/app';
 
 @Component({
   templateUrl: 'app.html'
@@ -13,35 +16,52 @@ import firebase from 'firebase';
 export class MyApp {
   rootPage: any;
   zone: NgZone;
+  pages: Array<{ title: string, component: any }>;
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
-    this.zone = new NgZone({});
-    
-    firebase.initializeApp({
-      apiKey: "AIzaSyBwEUe6x_w_yLFrr--xYLQJLxRT2Rc8vtY",
-      authDomain: "ionic-firebase-auth-9f555.firebaseapp.com",
-      databaseURL: "https://ionic-firebase-auth-9f555.firebaseio.com",
-      storageBucket: "ionic-firebase-auth-9f555.appspot.com",
-      messagingSenderId: "904481277327"
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, auth: AngularFireAuth) {
+    this.initializeApp();
+    //this.zone = new NgZone({}); 
+    // used for an example of ngFor and navigation
+    this.pages = [
+      { title: 'Home', component: HomeTabs },
+      { title: 'Station List', component: 'StationList' },
+      { title: 'Instrument List', component: 'InstrumentList' }
+    ];
+
+    const authObserver = auth.authState.subscribe((user: firebase.User) => {
+      if (user) {
+        this.rootPage = HomeTabs;
+        authObserver.unsubscribe();
+      } else {
+        this.rootPage = 'login';
+        authObserver.unsubscribe();
+      }
     });
 
+    /*
     const unsubscribe = firebase.auth().onAuthStateChanged((user) => {
-      this.zone.run( () => {
+      this.zone.run(() => {
         if (!user) {
-          this.rootPage = 'login';
-          unsubscribe();
-        } else { 
-          this.rootPage = HomePage;
+        } else {
+          //this.rootPage = HomePage;
+          this.rootPage = HomeTabs;          
           unsubscribe();
         }
-      });     
-    });
-
-    platform.ready().then(() => {
+      });
+    });*/
+  }
+  initializeApp() {
+    this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
-      statusBar.styleDefault();
-      splashScreen.hide();
+      this.statusBar.styleDefault();
+      this.splashScreen.hide();
     });
+  }
+
+  openPage(page) {
+    // Reset the content nav to have just this page
+    // we wouldn't want the back button to show in this scenario
+    //this.nav.setRoot(page.component);
   }
 }
