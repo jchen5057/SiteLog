@@ -3,11 +3,21 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Instrument List:</ion-title>
+    <ion-title>BAAQMD Instrument List:</ion-title>
   </ion-navbar>
 </ion-header>
 
-
 <ion-content padding>
-
+  <ion-list>
+    <button ion-item *ngFor="let instrument of instruments" (click)="gotoInstrument($event, instrument)">
+      <img src='assets/icon/baaqmd_icon.png' />
+      <ion-note item-left>
+        {{instrument.Class}}
+      </ion-note>
+      {{instrument.Name}}
+      <ion-note item-right>
+        {{instrument.SiteName}}
+      </ion-note>
+    </button>
+  </ion-list>
 </ion-content>

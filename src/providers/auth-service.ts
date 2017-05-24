@@ -55,9 +55,7 @@ export class AuthService {
 
   newProfile() {
     let profile = {
-      email: this.currentUser.email,
-      firstName: '',
-      lastName: '',
+      email: this.currentUser.email,      
       workPhone: '',
       cellPhone: '',
     };

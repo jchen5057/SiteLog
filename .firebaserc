@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "elog-8427d"
+    "default": "elog-8427d",
+    "staging": "sitelog-17255"
   }
 }

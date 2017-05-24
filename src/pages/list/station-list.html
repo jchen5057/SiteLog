@@ -7,14 +7,17 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
   <ion-list>
     <button ion-item *ngFor="let station of stations" (click)="gotoStation($event, station)">
-      <img [src]='station.icon' />
-      {{station.title}}
-      <div class="item-note" item-right>
-        {{station.note}}
-      </div>
+      <img src='assets/icon/baaqmd_icon.png' />
+      <ion-note item-left>
+        {{station.StationID}}
+      </ion-note>
+      {{station.Name}}
+      <ion-note item-right>
+        {{station.FullAQSCode}}
+      </ion-note>
     </button>
   </ion-list>
 </ion-content>

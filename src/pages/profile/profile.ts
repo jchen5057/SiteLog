@@ -13,13 +13,22 @@ import { AuthService } from '../../providers/auth-service';
   templateUrl: 'profile.html',
 })
 export class ProfilePage {
-  public userProfile: any;
+  public displayName: string;
+  public photoURL: any;
+  public email: string;
+  public password: string;
+  public workPhone: any; cellPhone: any;
 
   constructor(public navCtrl: NavController, public alertCtrl: AlertController,
-    public profileProvider: ProfileProvider, public auth: AuthService, db: AngularFireDatabase) {
+    public profileProvider: ProfileProvider, public auth: AuthService, public db: AngularFireDatabase) {
     if (auth.currentUser) {
+      this.displayName = auth.currentUser.displayName;
+      this.photoURL = auth.currentUser.photoURL;
+      this.email = auth.currentUser.email;
+
       db.object(`/userProfile/${auth.currentUser.uid}`).subscribe(p => {
-        this.userProfile = p;
+        this.workPhone = p.workPhone || '';
+        this.cellPhone = p.cellPhone || '';
       });
     } else {
       this.navCtrl.setRoot('login');
@@ -27,15 +36,7 @@ export class ProfilePage {
   }
 
   ionViewDidEnter() {
-    /*
-    this.profileProvider.getUserProfile().then(profileSnap => {
-      if (profileSnap) {
-        console.log(profileSnap);
-        this.userProfile = profileSnap;
-      } else {
-        this.userProfile = this.auth.newProfile();
-      }
-    });*/
+
   }
 
   logOut() {
@@ -44,122 +45,19 @@ export class ProfilePage {
     });
   }
 
-  updateName() {
-    let alert = this.alertCtrl.create({
-      message: "Your first name & last name",
-      inputs: [
-        {
-          name: 'firstName',
-          placeholder: 'Your first name',
-          value: this.userProfile.firstName || ''
-        },
-        {
-          name: 'lastName',
-          placeholder: 'Your last name',
-          value: this.userProfile.lastName || ''
-        },
-      ],
-      buttons: [
-        {
-          text: 'Cancel',
-        },
-        {
-          text: 'Save',
-          handler: data => {
-            this.profileProvider.updateName(data.firstName, data.lastName);
-          }
-        }
-      ]
-    });
-    alert.present();
+  resetPassword() {
+    this.auth.resetPassword(this.email);
   }
 
-  updatePhone() {
-    let alert = this.alertCtrl.create({
-      message: "Contact Phone #",
-      inputs: [
-        {
-          name: 'workPhone',
-          placeholder: 'Your work phone#',
-          value: this.userProfile.workPhone || ''
-        },
-        {
-          name: 'cellPhone',
-          placeholder: 'Your cell phone#',
-          value: this.userProfile.cellPhone || ''
-        },
-      ],
-      buttons: [
-        {
-          text: 'Cancel',
-        },
-        {
-          text: 'Save',
-          handler: data => {
-            this.profileProvider.updatePhone(data.workPhone, data.cellPhone);            
-          }
-        }
-      ]
+  save() {
+    this.auth.currentUser.updateProfile({
+      displayName: this.displayName,
+      photoURL: this.photoURL
     });
-    alert.present();
+
+    this.db.object(`/userProfile/${this.auth.currentUser.uid}`).update({
+      workPhone: this.workPhone,
+      cellPhone: this.cellPhone
+    });
   }
-
-  /*
-  updateEmail() {
-    let alert = this.alertCtrl.create({
-      inputs: [
-        {
-          name: 'newEmail',
-          placeholder: 'Your new email',
-        },
-        {
-          name: 'password',
-          placeholder: 'Your password',
-          type: 'password'
-        },
-      ],
-      buttons: [
-        {
-          text: 'Cancel',
-        },
-        {
-          text: 'Save',
-          handler: data => {
-            this.profileProvider.updateEmail(data.newEmail, data.password);
-          }
-        }
-      ]
-    });
-    alert.present();
-  }*/
-
-  updatePassword() {
-    let alert = this.alertCtrl.create({
-      inputs: [
-        {
-          name: 'newPassword',
-          placeholder: 'Your new password',
-          type: 'password'
-        },
-        {
-          name: 'oldPassword',
-          placeholder: 'Your old password',
-          type: 'password'
-        },
-      ],
-      buttons: [
-        {
-          text: 'Cancel',
-        },
-        {
-          text: 'Save',
-          handler: data => {
-            this.profileProvider.updatePassword(data.newPassword, data.oldPassword);
-          }
-        }
-      ]
-    });
-    alert.present();
-  }
-
 }

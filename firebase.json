@@ -1,11 +1,5 @@
 {
   "hosting": {
-    "public": "www",
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
-    ]
+    "public": "www"
   }
 }

@@ -14,69 +14,55 @@
     <ion-list-header>
       Personal Information
     </ion-list-header>
-
-    <ion-item (click)="updateName()">
-      <ion-grid>
-        <ion-row>
-          <ion-col col-4>
-            Name
-          </ion-col>
-          <ion-col col-8 *ngIf="userProfile?.firstName || userProfile?.lastName">
-            {{userProfile?.firstName}} {{userProfile?.lastName}}
-          </ion-col>
-          <ion-col col-8 class="placeholder-profile" *ngIf="!userProfile?.firstName">
-            <span>
-              Tap here to edit.
-            </span>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-item>
-
-    <ion-item (click)="updatePhone()">
-      <ion-grid>
-        <ion-row>
-          <ion-col col-4>
-            Phone#
-          </ion-col>
-          <ion-col col-8 *ngIf="userProfile?.workPhone || userProfile?.cellPhone" class="placeholder-profile">
-            {{userProfile?.workPhone}} {{userProfile?.cellPhone}}
-          </ion-col>
-          <ion-col col-8 class="placeholder-profile" *ngIf="!userProfile?.workPhone">
-            <span>
-              Tap here to edit.
-            </span>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-item>
-
-    <ion-item>
-      <ion-grid>
-        <ion-row>
-          <ion-col col-4>
-            Email
-          </ion-col>
-          <ion-col col-8 *ngIf="userProfile?.email" class="placeholder-profile">
-            {{userProfile?.email}}
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-item>
-
-    <ion-item (click)="updatePassword()">
-      <ion-grid>
-        <ion-row>
-          <ion-col col-4>
-            Password
-          </ion-col>
-          <ion-col col-8 class="placeholder-profile">
-            <span>
-              Tap here to edit.
-            </span>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-item>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label floating>Full Name:</ion-label>
+            <ion-input [(ngModel)]='displayName'></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-6>
+          <ion-item>
+            <ion-label floating>Work Phone:</ion-label>
+            <ion-input [(ngModel)]='workPhone'></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col col-6>
+          <ion-item>
+            <ion-label floating>Cell Phone:</ion-label>
+            <ion-input [(ngModel)]='cellPhone'></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label floating>Email:</ion-label>
+            <ion-input type='email' [readonly]='true' [(ngModel)]='email'></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <!--
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label floating>Password:</ion-label>
+            <ion-input type='password' placeholder='new password' [(ngModel)]='password'></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      -->
+      <ion-row>
+        <ion-col col-6>
+          <button ion-button color="danger" (click)='resetPassword()'>Reset password</button>
+        </ion-col>
+        <ion-col col-6>
+          <button ion-button color="secondary" (click)='save()'>Save</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </ion-list>
 </ion-content>

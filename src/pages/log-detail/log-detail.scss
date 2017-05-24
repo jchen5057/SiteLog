@@ -3,13 +3,23 @@ page-log-detail {
     text-align: center;
   }
   ion-label{
-    font-size:small;    
+    font-size:small; 
+    text-align: left;
   }
   ion-note {
     font-size: x-small;
     align-self: flex-start;
     margin-top: 2px;
     vertical-align: super;
+  }
+  .user{
+    justify-content: flex-start;
+    align-self:flex-start;    
+  }
+  .date{
+    justify-content: flex-end;
+    align-self:flex-start;
+    text-align: right;
   }
   .add-guest-form {
     button {

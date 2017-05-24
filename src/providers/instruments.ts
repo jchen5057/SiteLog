@@ -5,8 +5,8 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class Instruments {
-
     instruments: any;
+    selectedInstrument: any;
 
     constructor(public http: Http, public db: AngularFireDatabase) {
         console.log('Hello Instruments Provider');
@@ -20,11 +20,11 @@ export class Instruments {
         }
 
         return new Promise(resolve => {
-            this.db.list(`/instruments`).subscribe(instruments => {
-                /*
-                this.instruments = instruments.filter((instrument) => {
-                    return instrument.IsActive > 0;
-                })*/
+            this.db.list('/instruments', {
+                query: {
+                    orderbyChild: 'Name'
+                }
+            }).subscribe(instruments => {
                 this.instruments = instruments;
                 resolve(this.instruments);
             });

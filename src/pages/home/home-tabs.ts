@@ -8,8 +8,9 @@ import { MapPage } from '../map/map';
 })
 export class HomeTabs {
     tab1Root: any = MapPage;
-    tab2Root: any = 'StationList';
-    tab3Root: any = 'log-list';
+    tab2Root: any = 'station-list';
+    tab3Root: any = 'instrument-list';
+    tab4Root: any = 'about';
 
     constructor(public nav: NavController) {
 
@@ -17,10 +18,4 @@ export class HomeTabs {
     ionViewDidEnter() {
 
     }
-    goToProfile() { this.nav.push('profile'); }
-
-    goToCreate() { this.nav.push('event-create'); }
-
-    goToList() { this.nav.push('event-list'); }
-    
 }

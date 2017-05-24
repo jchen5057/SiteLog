@@ -4,7 +4,7 @@ import { FormControl } from '@angular/forms';
 import { Stations } from '../../providers/stations';
 import { Instruments } from '../../providers/instruments';
 import { GoogleMaps } from '../../providers/google-maps';
-import { NavController, Platform, ViewController } from 'ionic-angular';
+import { NavController, Platform, ViewController, LoadingController } from 'ionic-angular';
 import { AuthService } from '../../providers/auth-service';
 import 'rxjs/add/operator/debounceTime';
 
@@ -25,7 +25,7 @@ export class MapPage {
 
   searchStation: string = '';
   searchControl: FormControl;
-  selectedStation: string;
+  selectedStation: any;
   selectedInstruments: Array<any> = [];
   searching: any = false;
 
@@ -34,7 +34,7 @@ export class MapPage {
   location: any;
 
   constructor(public auth: AuthService, public nav: NavController, public zone: NgZone, public maps: GoogleMaps, public platform: Platform, public viewCtrl: ViewController,
-    public stationData: Stations, public instrumentData: Instruments) {
+    public loadingCtrl: LoadingController, public stationData: Stations, public instrumentData: Instruments) {
     this.searchControl = new FormControl();
   }
 
@@ -69,11 +69,13 @@ export class MapPage {
       this.searching = false;
     });
   }
+
   ionViewDidEnter() {
     console.log('ionViewDidEnter Map');
     let _station = this.stationData.selectedStation;
     if (_station) this.gotoStation(_station);
   }
+
   logout() {
     this.auth.logoutUser();
     this.nav.setRoot('login');
@@ -90,13 +92,18 @@ export class MapPage {
   }
 
   filterStations(searchStation) {
-    return this.stations.filter((station) => {
-      return station.Name.toLowerCase().indexOf(searchStation.toLowerCase()) > -1;
-    });
+    if (this.searchStation) {
+      return this.stations.filter((station) => {
+        return station.Name.toLowerCase().indexOf(searchStation.toLowerCase()) > -1;
+      })
+    }
+    else {
+      return this.stations;
+    }
   }
 
   selectClass($event) {
-    this.selectedStation = '';
+    this.selectedStation = null;
     this.searchStation = '';
     let _instruments = this.instruments.filter((instrument) => {
       return instrument.Class == $event;
@@ -112,24 +119,29 @@ export class MapPage {
   }
 
   mapStations(stationData) {
+    let loading = this.loadingCtrl.create({
+      content: 'Please wait...'
+    });
+
+    loading.present();
+
     this.maps.removeMarkers();
     for (let station of stationData) {
-      this.maps.addMarker(this, station.Name, station.Latitude, station.Longitude);
+      this.maps.addMarker(this, station, station.Latitude, station.Longitude);
     }
+    loading.dismiss();
+  }
+  gotoProfile() {
+    this.nav.push('profile');
   }
 
-  gotoStation(name: string) {
-    this.selectedStation = name;
-
+  gotoStation(station: any) {
     this.selectedInstruments = this.instruments.filter((instrument) => {
-      return instrument.SiteName == name;
+      return instrument.SiteName == station.Name;
     });
-    this.searchStation = name;
+    this.selectedStation = station;
+    this.searchStation = station.Name;
     this.setFilteredStations();
-  }
-
-  gotoLog(name: string) {
-    console.log('Load Log:', name);
   }
 
   save() {
@@ -140,11 +152,13 @@ export class MapPage {
     this.viewCtrl.dismiss();
   }
   swipeEvent($event) {
-    this.selectedStation = '';
+    this.selectedStation = null;
     this.selectedInstruments = [];
   }
   tapEvent(instrument) {
-    console.log('tap', instrument);
-    this.nav.push('log-detail', { instrument: instrument });
+    this.nav.push('log-detail', {
+      station: this.selectedStation,
+      instrument: instrument
+    });
   }
 }

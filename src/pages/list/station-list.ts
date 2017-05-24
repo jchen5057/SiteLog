@@ -1,46 +1,37 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, Tabs } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Tabs, LoadingController } from 'ionic-angular';
 import { Stations } from '../../providers/stations';
-//import { MapPage } from '../map/map';
 
-
-@IonicPage()
+@IonicPage({
+  name: 'station-list'
+})
 @Component({
   selector: 'page-station-list',
   templateUrl: 'station-list.html'
 })
 export class StationList {
-  selectedStation: string;
-  icons: string[];
-  stations: Array<{ title: string, note: string, icon: string }>;
+  stations: Array<any>;
   icon: string = 'assets/icon/baaqmd_icon.png';
 
-  constructor(public nav: NavController, public navParams: NavParams, public stationData: Stations) {
-    // If we navigated to this page, we will have an item available as a nav param
-    this.selectedStation = navParams.get('station');
-
+  constructor(public nav: NavController, public navParams: NavParams, public stationData: Stations, public loadingCtrl: LoadingController) {
     this.stations = [];
-
-    stationData.stations.forEach(station => {
-      this.stations.push({
-        title: station.Name,
-        note: station.FullAQSCode,
-        icon: this.icon
-      });
-    });
   }
 
   ionViewDidLoad() {
     console.log('Hello StationList Page');
+
+    let loading = this.loadingCtrl.create({
+      content: 'Please wait...'
+    });
+    this.stationData.stations.forEach(station => {
+      this.stations.push(station);
+    });
+    loading.dismiss();
   }
 
   gotoStation($event, station) {
-    // That's right, we're pushing to ourselves!
-    //this.navCtrl.push('StationPage', {
-    //  station: station
-    //});
     var t: Tabs = this.nav.parent;
-    this.stationData.selectedStation = station.title;
+    this.stationData.selectedStation = station;
     t.select(0);
   }
 }

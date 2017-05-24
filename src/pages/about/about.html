@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>About</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form>
+    <ion-card>
+      <ion-card-header>
+        BAAQMD Site Log App:
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <ion-item>
+            <ion-label floating>Contact:</ion-label>
+            <ion-icon name='contact'></ion-icon>
+            <ion-input [readonly]='true' value='Jun Chen'></ion-input>
+          </ion-item>
+        </ion-list>
+        <ion-list>
+          <ion-item>
+            <ion-label floating>Phone#:</ion-label>
+            <ion-icon name='phone'></ion-icon>
+            <ion-input type='tel' [readonly]='true' value='415-749-5057/415-531-6758'></ion-input>
+          </ion-item>
+        </ion-list>
+        <ion-list>
+          <ion-item>
+            <ion-label floating>Email:</ion-label>
+            <ion-icon name='mail'></ion-icon>
+            <ion-input type='email' [readonly]='true' value='jchen@baaqmd.gov'></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  </form>
+</ion-content>

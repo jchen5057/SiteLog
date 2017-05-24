@@ -1,13 +1,12 @@
 import { Injectable } from '@angular/core';
-import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+import { AngularFireDatabase } from 'angularfire2/database';
 import { Http } from '@angular/http';
-import 'rxjs/add/operator/map';
+//import 'rxjs/add/operator/map';
 
 @Injectable()
 export class Stations {
-
   stations: any;
-  selectedStation: string;
+  selectedStation: any;
 
   constructor(public http: Http, public db: AngularFireDatabase) {
     console.log('Hello Stations Provider');
@@ -22,9 +21,10 @@ export class Stations {
 
     return new Promise(resolve => {
       this.db.list(`/stations`).subscribe(stations => {
-        this.stations = stations.filter((station) => {
-          return station.IsActive > 0;
-        })
+        this.stations = stations;
+        //.filter((station) => {
+        //  return station.IsActive > 0;
+        //})
         resolve(this.stations);
       });
     });

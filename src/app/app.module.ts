@@ -7,6 +7,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { Geolocation } from '@ionic-native/geolocation';
 import { Network } from '@ionic-native/network';
+
+import { File } from '@ionic-native/file';
+import { Transfer } from '@ionic-native/transfer';
+import { FilePath } from '@ionic-native/file-path';
 import { Camera } from '@ionic-native/camera';
 
 import { MyApp } from './app.component';
@@ -27,7 +31,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 
 //import * as firebase from 'firebase';
-
+/*
 class CameraMock extends Camera {
   getPicture(options) {
     return new Promise((resolve, reject) => {
@@ -37,7 +41,7 @@ class CameraMock extends Camera {
       4gb2Yga25vd2xlZGdlLCBleGNlZWRzIHRoZSBzaG9ydCB2ZWhlbWVuY2Ugb2YgYW55IGNhcm5hbCBwbGVhc3VyZS4=`);
     });
   }
-}
+}*/
 
 export const firebaseConfig = {
   apiKey: "AIzaSyDPVX6GkNkbYjgGyMoGlaBaxRAQ09_EuFk",
@@ -74,7 +78,7 @@ export const firebaseConfig = {
     Geolocation,
     Network,
     Stations, Instruments, GoogleMaps, Connectivity,
-    { provide: Camera, useClass: CameraMock },
+    File, Transfer, Camera, FilePath,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     AuthService,
     LogProvider,

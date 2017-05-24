@@ -5,7 +5,7 @@
         </button>
         <ion-title>BAAQMD Station Map</ion-title>
         <ion-buttons end *ngIf='(auth.authState | async)'>
-            <button ion-button icon-only (click)='goToProfile()'>
+            <button ion-button icon-only (click)='gotoProfile()'>
                 <ion-avatar>
                     <ion-icon name='person'></ion-icon>                    
                 </ion-avatar>{{(user | async)?.displayName}}
@@ -41,10 +41,7 @@
         <p>Please connect to the Internet...</p>
     </div>
     <ion-card *ngIf='selectedStation' (swipe)="swipeEvent($event)" id='station'>
-        <ion-card-header>
-            {{selectedStation}}:
-        </ion-card-header>
-
+        <ion-list-header color='primary'>{{selectedStation.Name}}:</ion-list-header>
         <ion-card-content>
             <ion-grid no-padding>
                 <ion-row *ngFor='let i of selectedInstruments' (tap)='tapEvent(i)'>
