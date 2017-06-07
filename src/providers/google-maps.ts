@@ -114,38 +114,39 @@ export class GoogleMaps {
     console.log('add markers');
     let latLng = new google.maps.LatLng(lat, lng);
 
-    let icon = 'https://maps.google.com/mapfiles/kml/paddle/A.png';
-    let color = 'yellow';
+    let icon: string;
+    let color: string;
     let id: string;
     if (station.Name.startsWith('m_')) {
-      icon = 'https://maps.google.com/mapfiles/kml/paddle/M.png';
-      id = station.Name.substr(2, 1).toLowerCase();
+      icon = 'https://maps.google.com/mapfiles/kml/pal4/icon30.png';
       color = 'blue';
+      id = station.Name.substr(2, 1).toLowerCase();
     } else {
+      //let icon = 'https://maps.google.com/mapfiles/kml/paddle/A.png';
+      icon = 'assets/icon/baaqmd_icon.png';
+      color = 'red';
       id = station.Name.substr(0, 1);
     }
 
     let marker = new google.maps.Marker({
+      position: latLng,
       map: this.map,
+      icon: icon,
       title: station.Name,
       animation: google.maps.Animation.DROP,
-      position: latLng,
       clickable: true,
       label: { text: id, color: color },
     });
-
     this.addInfoWindow(page, marker, station);
-
     this.markers.push(marker);
-
   }
 
   addInfoWindow(page, marker, station) {
-
+    /*
     let content = `<a href="#">${station.name}</a>`;
     let infoWindow = new google.maps.InfoWindow({
       content: content
-    });
+    });*/
 
     google.maps.event.addListener(marker, 'click', () => {
       //infoWindow.open(this.map, marker);

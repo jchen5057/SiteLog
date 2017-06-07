@@ -2,64 +2,64 @@
   <ion-navbar color='secondary'>
     <ion-title>{{instrument.SiteName}}/{{instrument.Name}}</ion-title>
   </ion-navbar>
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-12>
+          <ion-item>
+            <ion-note item-left>Manufacturer:</ion-note>
+            <ion-label>{{instrument.Manufacturer}}</ion-label>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-7>
+          <ion-item>
+            <ion-note item-left>PurchaseDate:</ion-note>
+            <ion-label>{{instrument.PurchaseDate | date: 'yyyy-M-d'}}</ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col col-5>
+          <ion-item>
+            <ion-label>IsActive:</ion-label>
+            <ion-checkbox color='secondary' checked="false" [(ngModel)]='instrument.IsActive' (ionChange)="activeCheck()"></ion-checkbox>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-7>
+          <ion-item>
+            <ion-note item-left>Model:</ion-note>
+            <ion-label>{{instrument.Model}}</ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col col-5>
+          <ion-item>
+            <ion-note item-left>SerialNo:</ion-note>
+            <ion-label>{{instrument.SerialNo}}</ion-label>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-6>
+          <ion-item>
+            <ion-note item-left>DurationID:</ion-note>
+            <ion-label>{{instrument.DurationID}}</ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col col-6>
+          <ion-item>
+            <ion-note item-left>FrequencyID:</ion-note>
+            <ion-label>{{instrument.FrequencyID}}</ion-label>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-list-header color='primary'>Instrument Logs:</ion-list-header>
+  </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-grid>
-    <ion-row>
-      <ion-col col-12>
-        <ion-item>
-          <ion-note item-left>Manufacturer:</ion-note>
-          <ion-label>{{instrument.Manufacturer}}</ion-label>
-        </ion-item>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col col-7>
-        <ion-item>
-          <ion-note item-left>PurchaseDate:</ion-note>
-          <ion-label>{{instrument.PurchaseDate | date: 'yyyy-M-d'}}</ion-label>
-        </ion-item>
-      </ion-col>
-      <ion-col col-5>
-        <ion-item>
-          <ion-label>IsActive:</ion-label>
-          <ion-checkbox color='secondary' checked="false" [(ngModel)]='instrument.IsActive' (ionChange)="activeCheck()"></ion-checkbox>
-        </ion-item>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col col-7>
-        <ion-item>
-          <ion-note item-left>Model:</ion-note>
-          <ion-label>{{instrument.Model}}</ion-label>
-        </ion-item>
-      </ion-col>
-      <ion-col col-5>
-        <ion-item>
-          <ion-note item-left>SerialNo:</ion-note>
-          <ion-label>{{instrument.SerialNo}}</ion-label>
-        </ion-item>
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col col-6>
-        <ion-item>
-          <ion-note item-left>DurationID:</ion-note>
-          <ion-label>{{instrument.DurationID}}</ion-label>
-        </ion-item>
-      </ion-col>
-      <ion-col col-6>
-        <ion-item>
-          <ion-note item-left>FrequencyID:</ion-note>
-          <ion-label>{{instrument.FrequencyID}}</ion-label>
-        </ion-item>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-
-  <ion-list-header color='primary'>Instrument Logs:</ion-list-header>
-
+<ion-content #logContent>
   <ion-card *ngFor='let log of currentLog | async' (tap)='tapEvent(log)'>
     <ion-card-content>
       <ion-grid>
@@ -80,37 +80,34 @@
       </p>
     </ion-card-content>
   </ion-card>
-
 </ion-content>
 
 <ion-footer>
-  <form [formGroup]='logForm'>
-    <ion-item>
-      <ion-label color='danger' floating>New Log:</ion-label>
-      <img src="{{pathForImage(logPicture)}}" style="width: 100%" [hidden]="logPicture === null">
-      <h3 [hidden]="logPicture !== null">Please Select Image!</h3>
-      <ion-textarea [(ngModel)]='logText' formControlName='logText'></ion-textarea>
-    </ion-item>
-    <ion-toolbar color="primary">
-      <ion-buttons left>
-        <button ion-button (click)="clear()" icon-left>
+  <ion-fab top right>
+    <button ion-fab mini color='danger'><ion-icon name="add"></ion-icon></button>
+    <ion-fab-list side="left">
+      <button ion-fab (click)="triggerFile(fileInput)"><ion-icon name="camera"></ion-icon></button>
+      <button ion-fab (click)="save()"><ion-icon name="clipboard"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
+  <ion-item>
+    <ion-label color='danger' floating>New Log:</ion-label>
+    <img src="{{pathForImage(logPicture)}}" style="width: 100%" [hidden]="logPicture === null">
+    <h3 [hidden]="logPicture !== null">Please Select Image!</h3>
+    <ion-textarea #logTextArea [(ngModel)]='logText'></ion-textarea>
+  </ion-item>
+
+  <ion-toolbar color="primary">
+    <input id="file" #fileInput type="file" accept='image/*,capture=camera' style="display: none;" />
+    <ion-buttons left>
+      <button ion-button (click)="clear()" icon-left>
         <ion-icon name="undo"></ion-icon>Clear
       </button>
-      </ion-buttons>
-      <ion-buttons right>
-        <!--
-      <button ion-button icon-left (click)="presentActionSheet()">
-        <ion-icon name="camera"></ion-icon>Select Image
-      </button>
-      -->
-        <ion-icon name="camera"></ion-icon>Browse Image...
-        <input type='file' id='file' name='file' accept='image/*,capture=camera' formControlName='file' />
-      </ion-buttons>
-      <ion-buttons right>
-        <button [disabled]="!logText" ion-button (click)="save()" icon-left>        
+    </ion-buttons>
+    <ion-buttons end>
+      <button [disabled]="!logText" ion-button (click)="save()" icon-left>        
         <ion-icon name="clipboard"></ion-icon>Save
       </button>
-      </ion-buttons>
-    </ion-toolbar>
-  </form>
+    </ion-buttons>
+  </ion-toolbar>
 </ion-footer>

@@ -1,28 +1,26 @@
 page-map {
   .searchbar{
-    font-size:smaller;
+    font-size: smaller;
   }
+  
   #station{
     min-height:100px;
-    max-height:50%vh;
-        
-  ion-label{
-    font-size:small;    
-  }
-  ion-note {
-    font-size: x-small;
-    align-self: flex-start;
-    margin-top: 2px;
-    vertical-align: super;
-  }
-  .sub_label{
+    max-height:50%vh;     
+
+    ion-label{
+      font-size:small;    
+    }
+    ion-note {
+      font-size: x-small;
+      align-self: flex-start;
+      margin-top: 2px;
+      vertical-align: super;
+    }
+    .sub_label{
       font-size: xx-small;
       align-self: flex-start;
       margin-bottom: 0px;
       vertical-align: sub;
-    }
-    ion-list {
-      margin: 0 !important;
     }
     .active{
       color:blue;

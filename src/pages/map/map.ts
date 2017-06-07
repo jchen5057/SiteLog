@@ -73,13 +73,19 @@ export class MapPage {
   ionViewDidEnter() {
     console.log('ionViewDidEnter Map');
     let _station = this.stationData.selectedStation;
+    let _instrument = this.instrumentData.selectedInstrument;
+    this.stationData.selectedStation = '';
+    this.instrumentData.selectedInstrument = '';
+
     if (_station) this.gotoStation(_station);
+    else if (_instrument) this.tapEvent(_instrument);
   }
 
   logout() {
     this.auth.logoutUser();
     this.nav.setRoot('login');
   }
+
   onSearchInput() {
     this.searching = true;
   }
@@ -131,6 +137,7 @@ export class MapPage {
     }
     loading.dismiss();
   }
+
   gotoProfile() {
     this.nav.push('profile');
   }
@@ -153,7 +160,9 @@ export class MapPage {
   }
   swipeEvent($event) {
     this.selectedStation = null;
+    this.searchStation = null;
     this.selectedInstruments = [];
+    this.setFilteredStations();
   }
   tapEvent(instrument) {
     this.nav.push('log-detail', {

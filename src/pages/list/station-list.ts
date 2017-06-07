@@ -29,6 +29,13 @@ export class StationList {
     loading.dismiss();
   }
 
+  getStationIcon(stationName: string): string {
+    if (stationName.startsWith('m_')) {
+      return 'https://maps.google.com/mapfiles/kml/pal4/icon30.png';
+    } else {
+      return 'assets/icon/baaqmd_icon.png';
+    }
+  }
   gotoStation($event, station) {
     var t: Tabs = this.nav.parent;
     this.stationData.selectedStation = station;

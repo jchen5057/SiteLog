@@ -5,12 +5,32 @@
     </button>
     <ion-title>BAAQMD Instrument List:</ion-title>
   </ion-navbar>
+  <ion-toolbar>
+    <ion-grid no-padding>
+      <ion-row>
+        <ion-col col-6>
+        </ion-col>
+        <ion-col col-6>
+          <ion-item>
+            <ion-label class='searchbar'>Sort By</ion-label>
+            <ion-select [disabled]='true' [(ngModel)]="sortby">
+              <ion-option *ngFor="let sort of sortBy" [value]="sort" [selected]='sort==sortby'>{{sort}}</ion-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
   <ion-list>
+    <ion-list-header>
+      Instruments:
+      <ion-badge item-left>{{instruments.length}}</ion-badge>
+    </ion-list-header>
     <button ion-item *ngFor="let instrument of instruments" (click)="gotoInstrument($event, instrument)">
-      <img src='assets/icon/baaqmd_icon.png' />
+      <img [src]='getStationIcon(instrument.SiteName)' />
       <ion-note item-left>
         {{instrument.Class}}
       </ion-note>

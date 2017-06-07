@@ -1,8 +1,6 @@
-import { Component } from '@angular/core';
-import { Validators, FormBuilder, FormGroup } from '@angular/forms';
-import { IonicPage, NavController, NavParams, ActionSheetController, ToastController, Platform, LoadingController, Loading } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { IonicPage, Content, TextInput, NavController, NavParams, ActionSheetController, ToastController, Platform, LoadingController, Loading } from 'ionic-angular';
 import { AngularFireDatabase, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2/database';
-//import { FirebaseApp } from 'angularfire2';
 import * as firebase from 'firebase';
 
 import { LogProvider } from '../../providers/log';
@@ -23,35 +21,38 @@ declare var cordova: any;
   templateUrl: 'log-detail.html',
 })
 export class LogDetailPage {
-  //firebase:any;
+  @ViewChild('logContent') logContent: Content;
+  @ViewChild('logTextArea') logTextArea: TextInput;
+
   public station: any;
   public instrument: any;
   public currentLog: FirebaseListObservable<any[]>;
   public logText: string = '';
   logPicture: string = null;
-  private logForm: FormGroup
-  //lastImage: string = null;
   loading: Loading;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public logProvider: LogProvider, private auth: AuthService,
     private camera: Camera, private transfer: Transfer, private file: File, private filePath: FilePath, public actionSheetCtrl: ActionSheetController,
-    public toastCtrl: ToastController, public platform: Platform, public loadingCtrl: LoadingController, private formBuilder: FormBuilder) {
-
-    this.logForm = this.formBuilder.group({
-      logText: ['', Validators.required],
-      file: [],
-    });
+    public toastCtrl: ToastController, public platform: Platform, public loadingCtrl: LoadingController) {
 
     this.station = navParams.get('station');
     this.instrument = navParams.get('instrument');
     console.log(this.instrument);
     //this.logProvider.readCsvData();
     //this.logProvider.uploadData();
+
     this.currentLog = logProvider.getLogDetail(this.instrument);
   }
 
+  ionViewDidLoad() {
+  }
   ionViewDidEnter() {
-
+    let loading = this.loadingCtrl.create({
+      content: 'Please wait...'
+    });
+    loading.present();
+    this.logContent.scrollToBottom();
+    loading.dismiss();
   }
 
   activeCheck() {
@@ -171,13 +172,20 @@ export class LogDetailPage {
     });
   }*/
 
+  triggerFile(fileInput: HTMLInputElement) {
+    // do something
+    fileInput.click();
+  }
+
   clear() {
     this.logText = '';
     this.logPicture = null;
   }
 
   save() {
-    if (this.logPicture) {
+    if (!this.logText) {
+      this.logTextArea.setFocus();
+    } else if (this.logPicture) {
       let timestamp = Date.now();
       let storageRef = firebase.storage().ref();
       let path = `/siteLog/${this.instrument.InstrumentNo}/${this.station.Name}/${timestamp}`;
@@ -218,7 +226,7 @@ export class LogDetailPage {
       this.logProvider.addLog(this.instrument.InstrumentNo, logData)
       this.logText = '';
       this.logPicture = null;
-      this.logForm.reset();
+
       this.presentToast('New Log added...');
     }
   }

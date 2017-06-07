@@ -22,7 +22,7 @@ export class Instruments {
         return new Promise(resolve => {
             this.db.list('/instruments', {
                 query: {
-                    orderbyChild: 'Name'
+                    orderByChild: 'Name'
                 }
             }).subscribe(instruments => {
                 this.instruments = instruments;

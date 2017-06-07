@@ -20,11 +20,12 @@ export class Stations {
     }
 
     return new Promise(resolve => {
-      this.db.list(`/stations`).subscribe(stations => {
+      this.db.list('/stations', {
+        query: {
+          orderByChild: 'StationID'
+        }
+      }).subscribe(stations => {
         this.stations = stations;
-        //.filter((station) => {
-        //  return station.IsActive > 0;
-        //})
         resolve(this.stations);
       });
     });

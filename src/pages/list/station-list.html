@@ -9,8 +9,13 @@
 
 <ion-content padding>
   <ion-list>
+    <ion-list-header>
+    Stations:
+    <ion-badge item-left>{{stations.length}}</ion-badge>
+  </ion-list-header>
+
     <button ion-item *ngFor="let station of stations" (click)="gotoStation($event, station)">
-      <img src='assets/icon/baaqmd_icon.png' />
+      <img [src]='getStationIcon(station.Name)' />
       <ion-note item-left>
         {{station.StationID}}
       </ion-note>

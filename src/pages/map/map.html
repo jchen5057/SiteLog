@@ -17,15 +17,15 @@
             </button>
         </ion-buttons>
     </ion-navbar>
-    <ion-toolbar>
+    <ion-toolbar class='searchbar'>
         <ion-grid no-padding>
             <ion-row>
                 <ion-col col-6>
-                    <ion-searchbar [(ngModel)]="searchStation" [formControl]="searchControl" (ionInput)="onSearchInput()" class='searchbar'></ion-searchbar>
+                    <ion-searchbar [(ngModel)]="searchStation" [formControl]="searchControl" (ionInput)="onSearchInput()"></ion-searchbar>
                 </ion-col>
                 <ion-col col-6>
                     <ion-item>
-                        <ion-label class='searchbar'>Class</ion-label>
+                        <ion-label>Class</ion-label>
                         <ion-select [(ngModel)]="selected_class" (ngModelChange)='selectClass($event)'>
                             <ion-option *ngFor="let c of instrument_classes" [value]="c" [selected]='c==selected_class'>{{c}}</ion-option>
                         </ion-select>

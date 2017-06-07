@@ -20,6 +20,7 @@ import { MapPage } from '../pages/map/map';
 import { AuthService } from '../providers/auth-service';
 import { LogProvider } from '../providers/log';
 import { ProfileProvider } from '../providers/profile';
+import { OrderBy } from '../pipes/orderby';
 
 import { Stations } from '../providers/stations';
 import { Instruments } from '../providers/instruments';
@@ -31,17 +32,6 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 
 //import * as firebase from 'firebase';
-/*
-class CameraMock extends Camera {
-  getPicture(options) {
-    return new Promise((resolve, reject) => {
-      resolve(`TWFuIGlzIGRpc3Rpbmd1aXNoZWQsIG5vdCBvbmx5IGJ5IGhpcyByZWFzb24sIGJ1dCBieSB0aGlzIHNpbmd1
-      bGFyIHBhc3Npb24gZnJvbSBvdGhlciBhbmltYWxzLCB3aGljaCBpcyBhIGx1c3Qgb2YgdGhlIG1pbmQsIHRoYXQgYnkgY
-      SBwZXJzZXZlcmFuY2Ugb2YgZGVsaWdodCBpbiB0aGUgY29udGludWVkIGFuZCBpbmRlZmF0aWdhYmxlIGdlbmVyYXRpb2
-      4gb2Yga25vd2xlZGdlLCBleGNlZWRzIHRoZSBzaG9ydCB2ZWhlbWVuY2Ugb2YgYW55IGNhcm5hbCBwbGVhc3VyZS4=`);
-    });
-  }
-}*/
 
 export const firebaseConfig = {
   apiKey: "AIzaSyDPVX6GkNkbYjgGyMoGlaBaxRAQ09_EuFk",
@@ -56,7 +46,8 @@ export const firebaseConfig = {
   declarations: [
     MyApp,
     HomeTabs,
-    MapPage
+    MapPage,
+    OrderBy
   ],
   imports: [
     BrowserModule,
@@ -64,7 +55,7 @@ export const firebaseConfig = {
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
