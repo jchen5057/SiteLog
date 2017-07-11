@@ -1,9 +1,9 @@
 /// <reference path="../../typings/globals/google.maps/index.d.ts" />
 
 import { Injectable } from '@angular/core';
+import { Geolocation } from '@ionic-native/geolocation';
 //import { Platform } from 'ionic-angular';
 import { Connectivity } from './connectivity-service';
-import { Geolocation } from '@ionic-native/geolocation';
 
 @Injectable()
 export class GoogleMaps {
@@ -110,48 +110,62 @@ export class GoogleMaps {
     });
   }
 
-  addMarker(page: any, station: any, lat: number, lng: number): void {
-    console.log('add markers');
+  addMarker(page: any, position: any, lat: number, lng: number): void {
+    //yconsole.log('add markers', position);
     let latLng = new google.maps.LatLng(lat, lng);
 
-    let icon: string;
+    let icon: any;
     let color: string;
     let id: string;
-    if (station.Name.startsWith('m_')) {
-      icon = 'https://maps.google.com/mapfiles/kml/pal4/icon30.png';
-      color = 'blue';
-      id = station.Name.substr(2, 1).toLowerCase();
+
+    if (page) {
+      if (position.Name.startsWith('m_')) {
+        icon = 'https://maps.google.com/mapfiles/kml/pal4/icon30.png';
+        color = 'green';
+        id = position.Name.substr(2, 1).toLowerCase();
+      } else {
+        //let icon = 'https://maps.google.com/mapfiles/kml/paddle/A.png';
+        icon = 'assets/icon/baaqmd_icon.png';
+        color = 'red';
+        id = position.Name.substr(0, 1);
+      }
     } else {
-      //let icon = 'https://maps.google.com/mapfiles/kml/paddle/A.png';
-      icon = 'assets/icon/baaqmd_icon.png';
-      color = 'red';
-      id = station.Name.substr(0, 1);
+      //icon = position.icon;
+      icon = {
+        url: position.icon, // url
+        scaledSize: new google.maps.Size(30, 30), // scaled size
+        origin: new google.maps.Point(0, 0), // origin
+        anchor: new google.maps.Point(0, 0) // anchor
+      };
+
+      id = position.Name.substr(0, 1);
+      color = 'blue';
     }
 
     let marker = new google.maps.Marker({
       position: latLng,
       map: this.map,
       icon: icon,
-      title: station.Name,
+      title: position.Name,
       animation: google.maps.Animation.DROP,
       clickable: true,
       label: { text: id, color: color },
     });
-    this.addInfoWindow(page, marker, station);
+    this.addInfoWindow(page, marker, position);
     this.markers.push(marker);
   }
 
-  addInfoWindow(page, marker, station) {
-    /*
-    let content = `<a href="#">${station.name}</a>`;
-    let infoWindow = new google.maps.InfoWindow({
-      content: content
-    });*/
-
+  addInfoWindow(page, marker, position) {
     google.maps.event.addListener(marker, 'click', () => {
-      //infoWindow.open(this.map, marker);
-      //nav.push('StationPage', { station: name });
-      page.gotoStation(station);
+      if (page) {
+        page.gotoStation(position);
+      } else {
+        let content = `<a href="#">${position.Name}</a>`;
+        let infoWindow = new google.maps.InfoWindow({
+          content: content
+        });
+        //infoWindow.open(this.map, marker);
+      }
     });
 
   }

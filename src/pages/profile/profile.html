@@ -10,59 +10,48 @@
 </ion-header>
 
 <ion-content padding>
+  <ion-list-header>
+    Personal Information
+  </ion-list-header>
+
   <ion-list>
-    <ion-list-header>
-      Personal Information
-    </ion-list-header>
-    <ion-grid>
-      <ion-row>
-        <ion-col>
-          <ion-item>
-            <ion-label floating>Full Name:</ion-label>
-            <ion-input [(ngModel)]='displayName'></ion-input>
-          </ion-item>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col col-6>
-          <ion-item>
-            <ion-label floating>Work Phone:</ion-label>
-            <ion-input [(ngModel)]='workPhone'></ion-input>
-          </ion-item>
-        </ion-col>
-        <ion-col col-6>
-          <ion-item>
-            <ion-label floating>Cell Phone:</ion-label>
-            <ion-input [(ngModel)]='cellPhone'></ion-input>
-          </ion-item>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          <ion-item>
-            <ion-label floating>Email:</ion-label>
-            <ion-input type='email' [readonly]='true' [(ngModel)]='email'></ion-input>
-          </ion-item>
-        </ion-col>
-      </ion-row>
-      <!--
-      <ion-row>
-        <ion-col>
-          <ion-item>
-            <ion-label floating>Password:</ion-label>
-            <ion-input type='password' placeholder='new password' [(ngModel)]='password'></ion-input>
-          </ion-item>
-        </ion-col>
-      </ion-row>
-      -->
-      <ion-row>
-        <ion-col col-6>
-          <button ion-button color="danger" (click)='resetPassword()'>Reset password</button>
-        </ion-col>
-        <ion-col col-6>
-          <button ion-button color="secondary" (click)='save()'>Save</button>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+    <ion-item>
+      <ion-avatar item-left>
+        <img src="{{photoURL}}" />
+      </ion-avatar>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Full Name:</ion-label>
+      <ion-input [(ngModel)]='displayName'></ion-input>
+    </ion-item>
   </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Work Phone:</ion-label>
+      <ion-input [(ngModel)]='workPhone'></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Cell Phone:</ion-label>
+      <ion-input [(ngModel)]='cellPhone'></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Email:</ion-label>
+      <ion-input type='email' [readonly]='true' [(ngModel)]='email'></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <button ion-button color="danger" (click)='resetPassword()'>Reset password</button>
+    <button ion-button color="secondary" (click)='save()'>Save</button>
+  </ion-list>
+  <ion-label stacked>Change Avatar?</ion-label>
+  <input type="file" id="file" name="file" accept="image/*,capture=camera" />
+  <button ion-button type="button" (click)="upload()">Upload</button>
 </ion-content>

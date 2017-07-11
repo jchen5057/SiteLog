@@ -7,8 +7,9 @@
         <ion-buttons end *ngIf='(auth.authState | async)'>
             <button ion-button icon-only (click)='gotoProfile()'>
                 <ion-avatar>
-                    <ion-icon name='person'></ion-icon>                    
-                </ion-avatar>{{(user | async)?.displayName}}
+                    <img src="{{auth.currentUser.photoURL}}" />
+                </ion-avatar>                 
+                {{(user | async)?.displayName}}
             </button>
             <button ion-button icon-only (click)='logout()'>
                 <ion-avatar>

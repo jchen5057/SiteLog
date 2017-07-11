@@ -2,8 +2,18 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, AlertController } from 'ionic-angular';
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 
+import * as firebase from 'firebase/app';
+import 'firebase/storage';
+
 import { ProfileProvider } from '../../providers/profile';
 import { AuthService } from '../../providers/auth-service';
+
+interface Image {
+  path: string;
+  filename: string;
+  downloadURL?: string;
+  $key?: string;
+}
 
 @IonicPage({
   name: 'profile'
@@ -57,7 +67,31 @@ export class ProfilePage {
 
     this.db.object(`/userProfile/${this.auth.currentUser.uid}`).update({
       workPhone: this.workPhone,
-      cellPhone: this.cellPhone
+      cellPhone: this.cellPhone,
+      photoURL: this.photoURL
     });
   }
+  openFileDialog() {
+    console.log('fire! $scope.openFileDialog()');
+    //trigger('click', { target: document.getElementById('file') });
+  };
+
+  upload() {
+    // Create a root reference
+    let storageRef = firebase.storage().ref();
+
+    // This currently only grabs item 0, TODO refactor it to grab them all
+    for (let selectedFile of [(<HTMLInputElement>document.getElementById('file')).files[0]]) {
+      let path = `/avatar/${this.auth.currentUser.uid}`;
+      var iRef = storageRef.child(path);
+      iRef.put(selectedFile).then((snapshot) => {
+        this.photoURL = snapshot.downloadURL;
+        this.auth.currentUser.updateProfile({
+          displayName: this.displayName,
+          photoURL: this.photoURL
+        });
+      });
+    }
+  }
+
 }

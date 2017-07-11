@@ -6,7 +6,9 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { Geolocation } from '@ionic-native/geolocation';
+import { BackgroundGeolocation } from '@ionic-native/background-geolocation';
 import { Network } from '@ionic-native/network';
+import { CloudSettings, CloudModule } from '@ionic/cloud-angular';
 
 import { File } from '@ionic-native/file';
 import { Transfer } from '@ionic-native/transfer';
@@ -30,6 +32,8 @@ import { Connectivity } from '../providers/connectivity-service';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { LocationTracker } from '../providers/location-tracker/location-tracker';
+import { UserLocationProvider } from '../providers/user-location/user-location';
 
 //import * as firebase from 'firebase';
 
@@ -41,7 +45,11 @@ export const firebaseConfig = {
   storageBucket: "sitelog-17255.appspot.com",
   messagingSenderId: "172022077560"
 };
-
+const cloudSettings: CloudSettings = {
+  'core': {
+    'app_id': 'a7e57de1'
+  }
+};
 @NgModule({
   declarations: [
     MyApp,
@@ -53,6 +61,7 @@ export const firebaseConfig = {
     BrowserModule,
     HttpModule,
     IonicModule.forRoot(MyApp),
+    CloudModule.forRoot(cloudSettings),
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
@@ -67,13 +76,16 @@ export const firebaseConfig = {
     StatusBar,
     SplashScreen,
     Geolocation,
+    BackgroundGeolocation,
     Network,
     Stations, Instruments, GoogleMaps, Connectivity,
     File, Transfer, Camera, FilePath,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     AuthService,
     LogProvider,
-    ProfileProvider
+    ProfileProvider,
+    LocationTracker,
+    UserLocationProvider,
   ]
 })
 export class AppModule { }
